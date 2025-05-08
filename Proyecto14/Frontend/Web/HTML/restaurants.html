@@ -1,0 +1,266 @@
+<!--PARA HACER:
+  1- Descargar fuente y meterla en otro css como en el video (Dalto)
+  2-
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="/src/icons/faviconOriginal.png">
+      <link rel="stylesheet" href="/Frontend/Web/CSS/restaurants.css">
+      <script src="/Frontend/Web/JS/carouselNewReleases.js" defer></script>
+      <script src="/Frontend/Web/JS/neonEffect.js" defer></script>
+      <script src="/Frontend/Web/JS/subMenuChanges.js" defer></script>
+      <script src="/Frontend/Web/JS/delivery-scooter.js" defer></script>
+      <script src="/Frontend/Web/Web/sampleApi/api.js" defer></script>
+      <title>Meat & Grill</title>
+  </head>
+  <body>
+    <div class="main-background-container">
+      <img src="/Frontend/Web/src/products/backgrounds/backgroundImage.jpg" alt="" class="main-background-img">
+      <div class="gradient-bottom-background-img"></div>
+    </div>
+    <header class="header">
+      <nav class="nav">
+        <div class="div-lists-items-left">
+          <ul class="ul-list-left">
+            <li class="list-item-ul-button-stripes">
+              <input type="checkbox" id="toggle-menu" class="input-checkbox" hidden>
+              <label for="toggle-menu" class="list-item-ul-button-stripes toggle-label">
+                <img src="/Frontend/Web/src/icons/threeStripesWhite.png" alt="" class="img-stripes-list-item">
+                <img src="/Frontend/Web/src/icons/threeStripesRed.png" alt="" class="img-stripes-list-item-hover">
+                <img src="/Frontend/Web/src/icons/crossWhite.png" alt="" class="cross-img-submenu">
+                <img src="/Frontend/Web/src/icons/crossRed.png" alt="" class="cross-img-submenu-hover">
+              </label>
+              <!-- //Mobil\\ Opciones click imagen threeStripes -->
+              <div class="see-more-container">
+                <!--<div class="header-container-submenu">
+                  <img src="/src/icons/faviconOriginal.png" alt="" class="img-icon-list-item">
+                </div>-->
+                <!--<hr class="header-submenu-hr">-->
+                <div class="see-more-content icon-hamburger">
+                  <a href="/Frontend/Web/HTML/menu.html" class="see-more-content-a">
+                    <p>Menu</p>
+                    <img src="/Frontend/Web/src/icons/hamburgerWhite.png" alt="" class="img-icon-see-more-content">
+                  </a>
+                </div>
+                <!--<hr class="see-more-content-hr">-->
+                <div class="see-more-content icon-offers">
+                  <a href="/Frontend/Web/HTML/offers.html" class="see-more-content-a">
+                    <p>Offers</p>
+                    <img src="/Frontend/Web/src/icons/offersWhite.png" alt="" class="img-icon-see-more-content">
+                  </a>
+                </div>
+                <!--<hr class="see-more-content-hr">-->
+                <div class="see-more-content icon-rewards">
+                  <a href="/Frontend/Web/HTML/" class="see-more-content-a">
+                    <p>Rewards</p>
+                    <img src="/Frontend/Web/src/icons/rewardsWhite.png" alt="" class="img-icon-see-more-content">
+                  </a>
+                </div>
+                <!--<hr class="see-more-content-hr">-->
+                <div class="see-more-content icon-find-your-restaurant">
+                  <a href="/Frontend/Web/HTML/restaurants.html" class="see-more-content-a">
+                    <p>Find your Restaurant</p>
+                    <img src="/Frontend/Web/src/icons/findYourRestaurantWhite.png" alt="" class="img-icon-see-more-content">
+                  </a>
+                </div>
+                <!--<hr class="see-more-content-hr">-->
+                <div class="see-more-content contact-us">
+                  <a href="" class="see-more-content-a">
+                    <p>Contact Us</p>
+                    <img src="/Frontend/Web/src/icons/contactUsWhite.png" alt="" class="img-icon-see-more-content">
+                  </a>
+                </div>
+                <!--<hr class="see-more-content-hr">-->
+                <div class="see-more-content work-with-us">
+                  <a href="" class="see-more-content-a">
+                    <p>Work with us</p>
+                    <img src="/Frontend/Web/src/icons/workWithUsWhite.png" alt="" class="img-icon-see-more-content">
+                  </a>
+                </div>
+                <hr class="see-more-content-hr">
+                <div class="see-more-refers-container">
+                  <p class="see-more-refer">Meat Points</p>
+                  <p class="see-more-refer">Sustainability</p>
+                  <p class="see-more-refer">Frequently asked questions</p>
+                  <p class="see-more-refer">Terms & Conditions</p>
+                </div>
+              </div>                  
+            </li>
+                  <li class="list-item-ul">Menu</li>
+                  <li class="list-item-ul">Restaurants</li>
+                  <li class="list-item-ul">Offers</li>
+
+          </ul>
+        </div>
+
+        <div class="div-lists-item-center">
+            <li class="list-item-ul-logo">
+                <a href="/Frontend/Web/HTML/index.html" class="a-img-list-item">
+                    <!--<img src="/src/icons/faviconOriginal.png" alt="" class="img-icon-list-item">-->
+                    <h1 class="header-title">Meat & Grill</h1>
+                </a>
+            </li>
+        </div>
+        <div class="div-lists-items-right">
+          <ul class="ul-list-right">
+            <a href="/Frontend/Web/HTML/about_us.html">
+              <li class="list-item-ul">Aboout Us</li>
+            </a>
+            <li class="list-item-ul-sign-up">Sign Up</li>
+            <li class="list-item-ul-button-bag">
+              <button class="button-list-bag">
+                <img src="/Frontend/Web/src/icons/bagWhite.png" alt="" class="img-list-bag">
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!---->
+    
+    
+    <!---->
+    <div class="main-text-header">
+      <button class="button-header-order-now" onclick="window.location.href='/Frontend/Web/HTML/'">
+        <div class="bite-text">
+          <p>ORDER NOW</p>
+        </div>
+        <img src="/Frontend/Web/src/icons/bagWhite.png" alt="" class="header-order-now-bag-img">
+      </button>
+    </div>
+
+    <section class="find-your-restaurant-section">
+        <h1 class="title-find-your-rrstaurant">Find your restaurant</h1>
+        <!--CARD 1º-->
+        <div class="find-your-restaurant-card">
+            <img src="/Frontend/Web/src/products/backgrounds/santa-monica-restaurant.png" alt="" class="find-your-restaurant-img">
+            <div class="find-your-restaurant-card-info-container">
+                <span class="find-your-restaurant-title">SANTA MONICA</span>
+                <p class="find-your-restaurant-location">1501 Ocean Ave, Santa Monica, CA 90401</p>
+                <span class="find-your-restaurant-location-city">Los Angeles, United States</span>
+                <p class="find-your-restaurant-maps-link" onclick="window.location.href='/Frontend/Web/HTML/'">See on maps</p>
+            </div>
+            <div class="find-your-restaurant-below-bar-container">
+                <button class="find-your-restaurant-below-bar-button" onclick="window.location.href='/Frontend/Web/HTML/'">CALL NOW</button>
+                <div class="find-your-restaurant-icons-container">
+                    <img src="/Frontend/Web/src/icons/cochecito-de-bebe.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/sombrilla.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/silla-de-ruedas.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/wifi.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/coche.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="" alt="" class="find-your-restaurant-icon-img">
+                </div>
+            </div>
+        </div>
+        <!--CARD 2º-->
+        <div class="find-your-restaurant-card">
+            <img src="/Frontend/Web/src/products/backgrounds/downtown-restaurant.png" alt="" class="find-your-restaurant-img">
+            <div class="find-your-restaurant-card-info-container">
+                <span class="find-your-restaurant-title">DOWNTOWN</span>
+                <p class="find-your-restaurant-location">1501 Ocean Ave, Santa Monica, CA 90401</p>
+                <span class="find-your-restaurant-location-city">Los Angeles, United States</span>
+                <p class="find-your-restaurant-maps-link" onclick="window.location.href='/Frontend/Web/HTML/'">See on maps</p>
+            </div>
+            <div class="find-your-restaurant-below-bar-container">
+                <button class="find-your-restaurant-below-bar-button" onclick="window.location.href='/Frontend/Web/HTML/'">CALL NOW</button>
+                <div class="find-your-restaurant-icons-container">
+                    <img src="/Frontend/Web/src/icons/cochecito-de-bebe.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/sombrilla.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/silla-de-ruedas.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/wifi.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/coche.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="" alt="" class="find-your-restaurant-icon-img">
+                </div>
+            </div>
+        </div>
+        <!--CARD 3º-->
+        <div class="find-your-restaurant-card">
+            <img src="/Frontend/Web/src/products/backgrounds/santa-monica-restaurant.png" alt="" class="find-your-restaurant-img">
+            <div class="find-your-restaurant-card-info-container">
+                <span class="find-your-restaurant-title">SANTA MONICA</span>
+                <p class="find-your-restaurant-location">1501 Ocean Ave, Santa Monica, CA 90401</p>
+                <span class="find-your-restaurant-location-city">Los Angeles, United States</span>
+                <p class="find-your-restaurant-maps-link" onclick="window.location.href='/Frontend/Web/HTML/'">See on maps</p>
+            </div>
+            <div class="find-your-restaurant-below-bar-container">
+                <button class="find-your-restaurant-below-bar-button" onclick="window.location.href='/Frontend/Web/HTML/'">CALL NOW</button>
+                <div class="find-your-restaurant-icons-container">
+                    <img src="/Frontend/Web/src/icons/cochecito-de-bebe.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/sombrilla.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/silla-de-ruedas.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/wifi.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/coche.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="" alt="" class="find-your-restaurant-icon-img">
+                </div>
+            </div>
+        </div>
+        <!--CARD 4º-->
+        <div class="find-your-restaurant-card">
+            <img src="/Frontend/Web/src/products/backgrounds/santa-monica-restaurant.png" alt="" class="find-your-restaurant-img">
+            <div class="find-your-restaurant-card-info-container">
+                <span class="find-your-restaurant-title">SANTA MONICA</span>
+                <p class="find-your-restaurant-location">1501 Ocean Ave, Santa Monica, CA 90401</p>
+                <span class="find-your-restaurant-location-city">Los Angeles, United States</span>
+                <p class="find-your-restaurant-maps-link" onclick="window.location.href='/Frontend/Web/HTML/'">See on maps</p>
+            </div>
+            <div class="find-your-restaurant-below-bar-container">
+                <button class="find-your-restaurant-below-bar-button" onclick="window.location.href='/Frontend/Web/HTML/'">CALL NOW</button>
+                <div class="find-your-restaurant-icons-container">
+                    <img src="/Frontend/Web/src/icons/cochecito-de-bebe.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/sombrilla.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/silla-de-ruedas.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/wifi.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/coche.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="" alt="" class="find-your-restaurant-icon-img">
+                </div>
+            </div>
+        </div>
+        <!--CARD 5º-->
+        <div class="find-your-restaurant-card">
+            <img src="/Frontend/Web/src/products/backgrounds/santa-monica-restaurant.png" alt="" class="find-your-restaurant-img">
+            <div class="find-your-restaurant-card-info-container">
+                <span class="find-your-restaurant-title">SANTA MONICA</span>
+                <p class="find-your-restaurant-location">1501 Ocean Ave, Santa Monica, CA 90401</p>
+                <span class="find-your-restaurant-location-city">Los Angeles, United States</span>
+                <p class="find-your-restaurant-maps-link" onclick="window.location.href='/Frontend/Web/HTML/'">See on maps</p>
+            </div>
+            <div class="find-your-restaurant-below-bar-container">
+                <button class="find-your-restaurant-below-bar-button" onclick="window.location.href='/Frontend/Web/HTML/'">CALL NOW</button>
+                <div class="find-your-restaurant-icons-container">
+                    <img src="/Frontend/Web/src/icons/cochecito-de-bebe.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/sombrilla.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/silla-de-ruedas.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/wifi.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="/Frontend/Web/src/icons/coche.png" alt="" class="find-your-restaurant-icon-img">
+                    <img src="" alt="" class="find-your-restaurant-icon-img">
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="section-delivery-info">
+        <div class="delivery-img-container">
+          <img src="/Frontend/Web/src/products/backgrounds/scooter.png" alt="" class="delivery-img">
+        </div>
+        <div class="delivery-title-container">
+          <p class="title delivery-title">Free delivery</p>
+          <p class="title delivery-title">on orders over $30</p>
+        </div>
+        <div class="delivery-text-container">
+            <p class="delivery-text">Place your order and we’ll handle</p>
+            <p class="delivery-text "> the shipping – FREE over $30.</p>
+        </div>
+        <p class="delivery-subtext">All deliveries made with electric</p> <p class="delivery-subtext">scooters – 0% emissions.</p>
+        <button class="button-delivery-info" onclick="window.location.href='/HTML/'">
+          View details!
+        </button>
+      </section>
+
+      
+      
+  </body>
+</html>
