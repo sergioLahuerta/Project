@@ -6,44 +6,19 @@
 Thumbs.db
 
 # Node (por si usan herramientas como npm para gestión de assets)
-node_modules/
-dist/
-build/
+
 
 # ⚙️ Java - Backend
-*.class
-*.jar
-*.war
-*.ear
-*.log
-*.tmp
-*.swp
-*.iml
-target/
-out/
-.gradle/
-.idea/
-.project
-.classpath
-.settings/
+
 
 # Maven
-/logs
-/target
+
 
 # IntelliJ / Eclipse / VS Code
-*.iws
-*.ipr
-*.iml
-.vscode/
-.idea/
-*.launch
+
 
 # 🛢️ Oracle - Archivos sensibles o conexiones
-*.dmp
-*.bak
-*.env
-.env
+
 
 # 🔒 General
 *.key

@@ -344,27 +344,27 @@ body.no-scroll {
 }
 
 .icon-hamburger:hover .img-icon-see-more-content {
-    content: url('/Frontend/Web/src/icons/hamburgerRed.png');
+    content: url('/Proyecto/Frontend/Web/src/icons/hamburgerRed.png');
 }
 
 .icon-offers:hover .img-icon-see-more-content {
-    content: url('/Frontend/Web/src/icons/offersRed.png');
+    content: url('/Proyecto/Frontend/Web/src/icons/offersRed.png');
 }
 
 .icon-rewards:hover .img-icon-see-more-content {
-    content: url('/Frontend/Web/src/icons/rewardsRed.png');
+    content: url('/Proyecto/Frontend/Web/src/icons/rewardsRed.png');
 }
 
 .icon-find-your-restaurant:hover .img-icon-see-more-content {
-    content: url('/Frontend/Web/src/icons/findYourRestaurantRed.png');
+    content: url('/Proyecto/Frontend/Web/src/icons/findYourRestaurantRed.png');
 }
 
 .contact-us:hover .img-icon-see-more-content {
-    content: url('/Frontend/Web/src/icons/contactUsRed.png');
+    content: url('/Proyecto/Frontend/Web/src/icons/contactUsRed.png');
 }
 
 .work-with-us:hover .img-icon-see-more-content {
-    content: url('/Frontend/Web/src/icons/workWithUsRed.png');
+    content: url('/Proyecto/Frontend/Web/src/icons/workWithUsRed.png');
 }
 
 .header-title {
@@ -412,7 +412,7 @@ body.no-scroll {
 }
 
 .img-list-bag:hover {
-    content: url(/Frontend/Web/src/icons/bag.png);
+    content: url(/Proyecto/Frontend/Web/src/icons/bag.png);
 }
 
 .main-text-header {
