@@ -10,13 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const checkbox = document.getElementById('toggle-menu');
-    const headerTitle = document.querySelector('.header-title');
+    const imgHeaderRed = document.querySelector('.submenu');
+    const imgHeader = document.querySelector('.img-icon-list-item');
 
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) {
-        headerTitle.style.color = '#e22020';
+        imgHeader.style.display = 'none'
+        imgHeaderRed.style.display = 'block';
       } else {
-        headerTitle.style.color = '';
+        imgHeader.style.display = 'block';
+        imgHeaderRed.style.display = 'none';
       }
     });
   });

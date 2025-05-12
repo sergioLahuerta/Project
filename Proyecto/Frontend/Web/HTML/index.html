@@ -8,26 +8,28 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" href="/src/icons/faviconOriginal.png">
+      <link rel="icon" href="/Proyecto/Frontend/Web/src/icons/logo-favicon.png">
       <link rel="stylesheet" href="/Proyecto/Frontend/Web/CSS/index.css">
       <script src="/Proyecto/Frontend/Web/JS/carouselNewReleases.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/neonEffect.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/subMenuChanges.js" defer></script>
-      <script src="/Proyecto/Frontend/Web/JS/coockie.js" defer></script>
-      <script src="/Proyecto/Frontend/Web/JS/buttons-coockies.js" defer></script>
-      <script src="/Proyecto/Frontend/Web/Web/sampleApi/api.js" defer></script>
+      <script src="/Proyecto/Frontend/Web/JS/coockies.js" defer></script>
       <title>Meat & Grill</title>
   </head>
   <body>
+    <!--Coockie banner-->
     <div id="cookie-banner">
-      <p class="coockie-text">We use cookies to improve your experience.</p>
-      <button id="accept-btn">Accept</button>
+      <p>HOW TO PROTECT YOUR PRIVACY</p>
+      <p class="coockie-text">To improve your experience on our platforms and to show you more relevant information, we use cookies and similar technologies, both owned by Meat&Grill and third parties, and data sent directly from our servers. For more information, check out our Privacy & Cookie Policy.</p>
+      <button id="accept-btn">Accept all</button>
       <button id="reject-btn">Reject</button>
     </div>
+    <!--Bacground image header-->
     <div class="main-background-container">
       <img src="/Proyecto/Frontend/Web/src/products/backgrounds/backgroundImage.jpg" alt="" class="main-background-img">
       <div class="gradient-bottom-background-img"></div>
     </div>
+    <!--Header barra superior-->
     <header class="header">
       <nav class="nav">
         <div class="div-lists-items-left">
@@ -106,8 +108,9 @@
         <div class="div-lists-item-center">
             <li class="list-item-ul-logo">
                 <a href="/Proyecto/Frontend/Web/HTML/index.html" class="a-img-list-item">
-                    <!--<img src="/src/icons/faviconOriginal.png" alt="" class="img-icon-list-item">-->
-                    <h1 class="header-title">Meat & Grill</h1>
+                    <img src="/Proyecto/Frontend/Web/src/icons/logo-favicon.png" alt="" class="img-icon-list-item">
+                    <img src="/Proyecto/Frontend/Web/src/icons/logo-favicon-red.png" alt="" class="img-icon-list-item submenu">
+                    <!--<h1 class="header-title">Meat & Grill</h1>-->
                 </a>
             </li>
         </div>
@@ -116,7 +119,7 @@
             <a href="/Proyecto/Frontend/Web/HTML/about_us.html">
               <li class="list-item-ul">Aboout Us</li>
             </a>
-            <li class="list-item-ul-sign-up">Sign Up</li>
+            <li id="sing-up-button" class="list-item-ul-sign-up">Sign Up</li>
             <li class="list-item-ul-button-bag">
               <button class="button-list-bag">
                 <img src="/Proyecto/Frontend/Web/src/icons/bagWhite.png" alt="" class="img-list-bag">
@@ -129,7 +132,7 @@
     <!---->
     
     
-    <!---->
+    <!--Botón ORDER NOW-->
     <div class="main-text-header">
       <button class="button-header-order-now" onclick="window.location.href='/Frontend/Web/HTML/'">
         <div class="bite-text">
@@ -204,6 +207,8 @@
           <p class="burger-mood-text">Answer 5 questions and we’ll match your vibe to 3 burgers worth tasting.</p>
           <button class="burger-mood-button">Let’s find yours!</button>
         </div>
+
+        <!--Sección de los carteles promo-->
       <section class="section-promo-burgers">
         <p class=" title promo-burger-title">PROMOS</p>
         <div class="card-promo-burger-ad">
@@ -268,6 +273,7 @@
         </div>
       </section>
 
+      <!--Sección de información del delivery-->
       <section class="section-delivery-info">
         <div class="delivery-img-container">
           <img src="/Proyecto/Frontend/Web/src/products/backgrounds/scooter.png" alt="" class="delivery-img">
@@ -285,62 +291,93 @@
           View details!
         </button>
       </section>
+
+      <!--Sección del footer-->
       <section class="footer-section">
         <div class="footer-container">
           <p class="footer-title">Follow us & stay hungry for news</p>
           <div class="footer-socialmedia-container">
-            <a class="footer-link-socialmedia">
-              <img src="/Proyecto/Frontend/Web/src/icons/facebook.png" alt="" class="footer-socialmedia-icon">
+            <a class="footer-link-socialmedia" href="https://www.facebook.com/search/top/?q=Meet%20Grill%20US" rel="noopener noreferrer" target="_blank">
+              <img src="/Proyecto/Frontend/Web/src/icons/facebookRed.png" alt="" class="footer-socialmedia-icon">
             </a>
             <a class="footer-link-socialmedia">
-              <img src="/Proyecto/Frontend/Web/src/icons/instagram.png" alt="" class="footer-socialmedia-icon">
+              <img src="/Proyecto/Frontend/Web/src/icons/instagramRed.png" alt="" class="footer-socialmedia-icon">
             </a>
-            <a class="footer-link-socialmedia">
-              <img src="/Proyecto/Frontend/Web/src/icons/twitter.png" alt="" class="footer-socialmedia-icon">
+            <a class="footer-link-socialmedia" href="https://x.com/MeatAndGrillUS" target="_blank">
+              <img src="/Proyecto/Frontend/Web/src/icons/twitterRed.png" alt="" class="footer-socialmedia-icon">
             </a>
-            <a class="footer-link-socialmedia">
-              <img src="/Proyecto/Frontend/Web/src/icons/tik-tok.png" alt="" class="footer-socialmedia-icon">
+            <a class="footer-link-socialmedia" href="https://www.tiktok.com/@meat_and_grill_usa" target="_blank">
+              <img src="/Proyecto/Frontend/Web/src/icons/tik-tokRed.png" alt="" class="footer-socialmedia-icon">
             </a>
           </div>
         </div>
         <img src="/Proyecto/Frontend/Web/src/products/backgrounds/footer.png" alt="" class="footer-promo-img">
         <div class="footer-pannel-container">
-          <!-- Sección 1 -->
+          <!-- Sección About Us -->
           <div class="footer-pannel-group">
             <input type="checkbox" id="toggle-about-us" class="footer-pannel-toggle">
             <div class="footer-pannel-row">
               <p class="footer-pannel-row-title">About Us</p>
               <label for="toggle-about-us" class="footer-pannel-row-link">
                 <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="footer-pannel-row-img">
-                <img src="/Proyecto/Frontend/Web/src/icons/menos.png" alt="" class="footer-pannel-row-img">
+                <img src="/Proyecto/Frontend/Web/src/icons/menos.png" alt="" class="footer-pannel-row-img img-hover">
               </label>
             </div>
             <div class="footer-pannel-drop-down">
               <a href="#">Sustainability</a>
-              <a href="#">Our Team</a>
-              <a href="#">Our Team</a>
-              <a href="#">Our Team</a>
+              <a href="#">Our Mission</a>
+              <a href="#">Careers</a>
+              <a href="#">Partners & Collaborators</a>
             </div>
           </div>
         
-          <!-- Sección 2 -->
+          <!-- Sección Products & Services -->
           <div class="footer-pannel-group">
             <input type="checkbox" id="toggle-products-services" class="footer-pannel-toggle">
-            
             <div class="footer-pannel-row">
               <p class="footer-pannel-row-title">Products & Services</p>
               <label for="toggle-products-services" class="footer-pannel-row-link">
                 <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="footer-pannel-row-img">
+                <img src="/Proyecto/Frontend/Web/src/icons/menos.png" alt="" class="footer-pannel-row-img img-hover">
               </label>
             </div>
-        
             <div class="footer-pannel-drop-down">
               <a href="#">Shipping & Delivery</a>
-              <a href="#">Product Range</a>
+              <a href="#">Custom Orders</a>
+              <a href="#">Special Offers</a>
+              <a href="#">Gift Cards</a>
+              <a href="#">Allergen Info</a>
+            </div>
+          </div>
+          <!-- Sección Customer Support -->
+          <div class="footer-pannel-group">
+            <input type="checkbox" id="toggle-customer-support" class="footer-pannel-toggle">
+            <div class="footer-pannel-row">
+              <p class="footer-pannel-row-title">Customer Support</p>
+              <label for="toggle-customer-support" class="footer-pannel-row-link">
+                <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="footer-pannel-row-img">
+                <img src="/Proyecto/Frontend/Web/src/icons/menos.png" alt="" class="footer-pannel-row-img img-hover">
+              </label>
+            </div>
+            <div class="footer-pannel-drop-down">
+              <a href="#">Contact Us</a>
+              <a href="#">FAQ</a>
+              <a href="#">Refunds & Returns</a>
+              <a href="#">Work With Us</a>
             </div>
           </div>
         </div>
-        
+        <hr class="footer-hr">
+        <div class="footer-below-pannel-legal-info">
+          <p class="footer-legal-info-p">Privacy Policy</p>
+          <p class="footer-legal-info-p">California Privacy Notice</p>
+          <p class="footer-legal-info-p">Terms & Conditions</p>
+          <p class="footer-legal-info-p">Accessibility</p>
+          <div class="footer-below-pannel-last-line-container">
+            <img src="/Proyecto/Frontend/Web/src/icons/logo-favicon.png" alt="" class="footer-below-pannel-img">
+            <p class="footer-legal-info-p">2025 Meat & Grill. All Rights Reserved</p>
+          </div>
+        </div>
       </section>
     </div>
   </body>

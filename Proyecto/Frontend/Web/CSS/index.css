@@ -33,8 +33,13 @@ body.no-scroll {
     width: 100%;
 }
 
+/*Coockie banner*/
 #cookie-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
+    height: 40%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -48,20 +53,28 @@ body.no-scroll {
 }
 
 .coockie-text {
-    margin-bottom: 5%
+    margin: 5% auto;
+    font-size: 70%;
+    text-align: justify;
+    width: 75%;
 }
 
 #cookie-banner button {
-    margin: 0 10px;
+    margin: 5px 0;
     padding: 8px 15px;
     background: #fff;
     color: #333;
     border: none;
     cursor: pointer;
     border-radius: 15px;
-    width: 25%;
+    width: 75%;
 }
 
+#accept-btn {
+    font-weight: 600;
+}
+
+/*Bacground image header*/
 .main-background-container {
     display: grid;
     position: absolute;
@@ -83,6 +96,7 @@ body.no-scroll {
     width: 100%;
 }
 
+/*Header barra superior*/
 .header {
     position: sticky;
     top: 0;
@@ -332,6 +346,16 @@ body.no-scroll {
 .a-img-list-item {
     display: flex;
     text-decoration: none;
+    justify-content: center;
+}
+
+.img-icon-list-item {
+    width: 45%;
+    padding: 10%;
+}
+
+.submenu {
+    display: none;
 }
 
 .img-icon-see-more-content {
@@ -421,7 +445,6 @@ body.no-scroll {
     margin: 0 auto;
     margin-top: 7%;
     line-height: 1.5;
-    background-color: #000910;
     width: 40%;
 }
 
@@ -758,7 +781,7 @@ body.no-scroll {
 
 .footer-section {
     display: flex;
-    margin-top: 15%;
+    margin-top: 10%;
     flex-wrap: wrap;
     flex-direction: column;
 }
@@ -843,6 +866,10 @@ body.no-scroll {
     width: 0.8rem;
 }
 
+.img-hover {
+    display: none;
+}
+
 .footer-pannel-drop-down {
     display: none;
     flex-direction: column;
@@ -859,6 +886,45 @@ body.no-scroll {
 
 .footer-pannel-toggle:checked ~ .footer-pannel-drop-down {
     display: flex;
+}
+
+.footer-pannel-toggle:checked + .footer-pannel-row .img-hover:nth-child(2) {
+    display: block;
+}
+
+.footer-pannel-toggle:checked + .footer-pannel-row .footer-pannel-row-img {
+    display: none;
+}
+
+.footer-hr {
+    margin: 5% auto;
+    background-color: #e22020;
+    height: 1px;
+    border: none;
+    width: 90%;
+}
+
+.footer-below-pannel-legal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-legal-info-p {
+    margin: 2%;
+    font-size: 3vw;
+}
+
+.footer-below-pannel-last-line-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4%;
+}
+
+.footer-below-pannel-img {
+    width: 10%;
+    margin-right: 2%;
 }
 
 /* Controlar el volteo de la pantalla de 90 o 270 grados en móviles y tabletas. */
