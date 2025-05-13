@@ -450,12 +450,14 @@ body.no-scroll {
     border: 1px solid #e22020;
     border-radius: 10px;
     opacity: 0;
+    visibility: hidden;
     transform: translateX(20px);
     transition: all 0.4s ease;
 }
 
 .list-item-ul-sign-up:hover .pannel-choice-hover-container {
     opacity: 1;
+    visibility: visible;
     transform: translateX(0);
     pointer-events: auto;
 }
@@ -475,6 +477,16 @@ body.no-scroll {
 .pannel-choice-hover-li:hover {
     background-color: #e22020;
     color: white;
+}
+
+.li-up {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.li-down {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 
 .button-list-bag {
@@ -621,11 +633,12 @@ body.no-scroll {
 .sign-up-policies-title {
     font-size: 12px;
     margin: 2% 0;
-        margin-top: 7%;
+    margin-top: 7%;
 }
 
 .sign-up-policies-text {
     text-align: left;
+    line-height: 1.4;
 }
 
 body.no-scroll {
