@@ -1,6 +1,6 @@
+/*Sección Submenú lateral (three-stripes)*/
 document.addEventListener("DOMContentLoaded", () => {
-    const toggleMenu = document.getElementById("toggle-menu");
-  
+    const toggleMenu = document.getElementById("toggle-menu");  
     toggleMenu.addEventListener("change", () => {
       if (toggleMenu.checked) {
         document.body.classList.add("no-scroll");
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.remove("no-scroll");
       }
     });
-
+    
     const checkbox = document.getElementById('toggle-menu');
     const imgHeaderRed = document.querySelector('.submenu');
     const imgHeader = document.querySelector('.img-icon-list-item');
@@ -22,4 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         imgHeaderRed.style.display = 'none';
       }
     });
+
   });
+
+  

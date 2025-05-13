@@ -47,7 +47,7 @@ body.no-scroll {
     color: #ffffff;
     padding: 5% 0;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
     transform: translateY(8px);
     display: block;
 }
@@ -99,7 +99,7 @@ body.no-scroll {
 /*Header barra superior*/
 .header {
     position: sticky;
-    top: 0;
+    top: -1px;
     width: 100%;
     z-index: 1;
 }
@@ -230,6 +230,8 @@ body.no-scroll {
     display: inline-block;
     width: 30px;
     height: 30px;
+    background-color: transparent;
+    border: none;
 }
 
 #toggle-menu:checked ~ .see-more-container {
@@ -407,20 +409,72 @@ body.no-scroll {
 }
 
 .list-item-ul-sign-up {
-    color: #ffffff;
-    font-size: 10px;
-    text-wrap: nowrap;
-    border: 1px solid #ffffff;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: transparent;
+    position: relative;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
-
 }
 
-.list-item-ul-sign-up:hover {
-    color: #e22020;
+.list-item-ul-sign-up img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+    object-fit: contain;
+}
+
+.list-item-ul-access-img {
+    opacity: 1;
+}
+
+.list-item-ul-access-img-hover {
+    opacity: 0;
+}
+
+.list-item-ul-sign-up:hover .list-item-ul-access-img {
+    opacity: 0;
+}
+
+.list-item-ul-sign-up:hover .list-item-ul-access-img-hover {
+    opacity: 1;
+}
+
+.pannel-choice-hover-container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 28vw;
+    background-color: #000910;
     border: 1px solid #e22020;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.4s ease;
+}
+
+.list-item-ul-sign-up:hover .pannel-choice-hover-container {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.pannel-choice-hover-ul {
+    list-style: none;
+}
+
+.pannel-choice-hover-li {
+    color: white;
+    padding: 7% 15%;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.pannel-choice-hover-li:hover {
+    background-color: #e22020;
+    color: white;
 }
 
 .button-list-bag {
@@ -437,6 +491,145 @@ body.no-scroll {
 
 .img-list-bag:hover {
     content: url(/Proyecto/Frontend/Web/src/icons/bag.png);
+}
+
+/*Sección Sign up*/
+.signup-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #333;
+    font-family: 'MundoModerno';
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.signup-section.show {
+    transform: translateY(0%);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.background-layer-grey {
+    background-color: #000000;
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+  
+.background-layer-grey.show {
+    opacity: 0.3;
+    transform: translateY(0%);
+    pointer-events: all;
+}
+
+.signup-container {
+    padding: 0 5%;
+    position: relative;
+    background-color: #333;
+}
+
+.sign-up-header-img {
+    width: 50%;
+}
+
+.signup-close-btn {
+    opacity: 0;
+    visibility: hidden;
+    width: 20%;
+    position: absolute;
+    top: 1.53%;
+    right: 5%;
+    border: 2px solid #f33434;
+    padding: 3%;
+    background-color: #333333;
+    z-index: 2;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.signup-close-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.sign-up-info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-info-title {
+    margin: 5% 0;
+}
+
+.sign-up-info-subtitle {
+    font-size: 13px;
+}
+
+.sign-up-info-main-text {
+    margin: 3% 0;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-form-input {
+    padding: 3% 5%;
+    border-radius: 5px;
+    margin: 3% 0;
+    border: none;
+}
+
+.sign-up-form-button {
+    margin: 3% 0;
+    padding: 2% 4%;
+    background-color: #e22020;
+    color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Merienda'
+}
+
+.sign-up-form-button:hover {
+    background-color: #c22828;
+}
+
+.sign-up-policies-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    font-family: 'MundoModerno';
+}
+
+.sign-up-policies-title {
+    font-size: 12px;
+    margin: 2% 0;
+        margin-top: 7%;
+}
+
+.sign-up-policies-text {
+    text-align: left;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 .main-text-header {
@@ -826,6 +1019,7 @@ body.no-scroll {
     flex-direction: column;
     width: 80%;
     margin: 4% auto;
+    font-family: 'Karla';
 }
 
 .footer-pannel-group {

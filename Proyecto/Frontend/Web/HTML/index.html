@@ -14,6 +14,7 @@
       <script src="/Proyecto/Frontend/Web/JS/neonEffect.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/subMenuChanges.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/coockies.js" defer></script>
+      <script src="/Proyecto/Frontend/Web/JS/sign-up.js" defer></script>
       <title>Meat & Grill</title>
   </head>
   <body>
@@ -98,10 +99,9 @@
                 </div>
               </div>                  
             </li>
-                  <li class="list-item-ul">Menu</li>
-                  <li class="list-item-ul">Restaurants</li>
-                  <li class="list-item-ul">Offers</li>
-
+            <li class="list-item-ul">Menu</li>
+            <li class="list-item-ul">Restaurants</li>
+            <li class="list-item-ul">Offers</li>
           </ul>
         </div>
 
@@ -110,7 +110,6 @@
                 <a href="/Proyecto/Frontend/Web/HTML/index.html" class="a-img-list-item">
                     <img src="/Proyecto/Frontend/Web/src/icons/logo-favicon.png" alt="" class="img-icon-list-item">
                     <img src="/Proyecto/Frontend/Web/src/icons/logo-favicon-red.png" alt="" class="img-icon-list-item submenu">
-                    <!--<h1 class="header-title">Meat & Grill</h1>-->
                 </a>
             </li>
         </div>
@@ -119,7 +118,16 @@
             <a href="/Proyecto/Frontend/Web/HTML/about_us.html">
               <li class="list-item-ul">Aboout Us</li>
             </a>
-            <li id="sing-up-button" class="list-item-ul-sign-up">Sign Up</li>
+            <li id="sing-up-button" class="list-item-ul-sign-up">
+              <img src="/Proyecto/Frontend/Web/src/icons/accessWhite.png" alt="" class="list-item-ul-access-img">
+              <img src="/Proyecto/Frontend/Web/src/icons/accessRed.png" alt="" class="list-item-ul-access-img-hover">
+              <div class="pannel-choice-hover-container">
+                <ul class="pannel-choice-hover-ul">
+                  <li class="pannel-choice-hover-li">Sign Up</li>
+                  <li class="pannel-choice-hover-li">Log In</li>
+                </ul>
+              </div>
+            </li>
             <li class="list-item-ul-button-bag">
               <button class="button-list-bag">
                 <img src="/Proyecto/Frontend/Web/src/icons/bagWhite.png" alt="" class="img-list-bag">
@@ -129,8 +137,36 @@
         </div>
       </nav>
     </header>
-    <!---->
-    
+
+    <!--Sección Sing up-->
+    <img src="/Proyecto/Frontend/Web/src/icons/crossWhite.png" id="signup-close-btn" class="signup-close-btn">
+    <div id="background-grey" class="background-layer-grey"></div>
+    <div id="signup-id" class="signup-section">
+      <div class="signup-container">
+        <img src="/Proyecto/Frontend/Web/src/icons/logo-favicon-club-new.png" alt="" class="sign-up-header-img">
+        <div class="sign-up-info-container">
+          <h2 class="sign-up-info-title">M&G REWARDS ARE WAITING FOR YOU</h2>
+          <p class="sign-up-info-subtitle">Sign up to get discount codes, free shipping, exclusive products, and earn MeatPoints!</p>
+          <p class="sign-up-info-main-text">Sign in or register. It's free!</p>
+        </div>
+        <form id="login-form" method="POST" action="/login" class="sign-up-form">
+          <input type="email" id="email" name="email" placeholder="Email" required class="sign-up-form-input">
+          <input type="password" id="password" name="password" placeholder="Password" required class="sign-up-form-input">
+          <button type="submit" class="sign-up-form-button">Sign Up</button>
+          <p class="">Already have an account? Sign in</p>
+          <div class="sign-up-policies-container">
+            <p class="sign-up-policies-title">PRIVACY NOTICE</p>
+            <p class="sign-up-policies-text">
+              Your personal data is provided to M&G mAg to create an Meat&Grill membership as described in the M&G Privacy Notice. Your registrationcannot be completed without your data. As part of your membership, Meat&Grill will send you personalized marketing messages about offersand products based on your M&G activities and engagement with Meat&Grill. You can unsubscribe at any time. By completing yourregistration, you have read the M&G Privacy Notice , understood your rights, and understood how adidas uses your data.</p>
+          </div>
+          <div class="sign-up-policies-container">
+            <p class="sign-up-policies-title">PERSONALIZED EMAIL MARKETING MESSAGES</p>
+            <p class="sign-up-policies-text">
+              Personalized marketing messages from adidas AG and adidas Espana SAU (“adidas”). I understand that as a member of the adiClub, adidas will use my email address and other personal data listed in the Privacy Notice to send me information about the adidas brand and its products based on my interests and preferences through in-app notifications as well as email marketing messages sent to the email address used to create this account. I understand that I can exercise my right to opt out of marketing emails at any time by using the unsubscribe button found in every email, changing my in-app notification preferences, or modifying my marketing communication preferences by logging into my profile or contacting adidas Customer Service for assistance.</p>
+          </div>
+        </form>
+      </div>
+    </div>
     
     <!--Botón ORDER NOW-->
     <div class="main-text-header">

@@ -757,6 +757,7 @@ body.no-scroll {
     flex-direction: column;
     width: 80%;
     margin: 4% auto;
+    font-family: 'Karla';
 }
 
 .footer-pannel-group {
