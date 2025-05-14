@@ -64,7 +64,7 @@
                 </div>
                 <!--<hr class="see-more-content-hr">-->
                 <div class="see-more-content icon-rewards">
-                  <a href="/Proyecto/Frontend/Web/HTML/" class="see-more-content-a">
+                  <a href="/Proyecto/Frontend/Web/HTML/rewards.html" class="see-more-content-a">
                     <p>Rewards</p>
                     <img src="/Proyecto/Frontend/Web/src/icons/rewardsWhite.png" alt="" class="img-icon-see-more-content">
                   </a>
@@ -147,9 +147,9 @@
           <p class="sign-up-info-subtitle">Sign up to get discount codes, free shipping, exclusive products, and earn MeatPoints!</p>
           <p class="sign-up-info-main-text">Register now. It's free!</p>
         </div>
-        <form id="login-form" method="POST" action="/login" class="sign-up-form">
-          <input type="email" id="email" name="email" placeholder="Email" required class="sign-up-form-input">
-          <input type="password" id="password" name="password" placeholder="Password" required class="sign-up-form-input">
+        <form id="signup-form" method="POST" action="/login" class="sign-up-form">
+          <input type="email" id="signup-email" name="email" placeholder="Email" required class="sign-up-form-input">
+          <input type="password" id="signup-password" name="password" placeholder="Password" required class="sign-up-form-input">
           <button type="submit" class="sign-up-form-button">Sign Up</button>
           <div class="sign-up-policies-container">
             <p class="sign-up-policies-title">PRIVACY NOTICE</p>
@@ -176,8 +176,8 @@
            <p class="sign-up-info-subtitle">Log in to get discount codes, free shipping, exclusive products, and earn MeatPoints!</p>
          </div>
          <form id="login-form" method="POST" action="/login" class="sign-up-form">
-           <input type="email" id="email" name="email" placeholder="Email" required class="sign-up-form-input">
-           <input type="password" id="password" name="password" placeholder="Password" required class="sign-up-form-input">
+           <input type="email" id="login-email" name="email" placeholder="Email" required class="sign-up-form-input">
+           <input type="password" id="login-password" name="password" placeholder="Password" required class="sign-up-form-input">
            <button type="submit" class="sign-up-form-button">Log In</button>
            <div class="sign-up-policies-container">
              <p class="sign-up-policies-title">PRIVACY NOTICE</p>
@@ -193,18 +193,13 @@
        </div>
      </div>
 
-      <!--Botón ORDER NOW-->
-      <div class="main-text-header">
-        <button class="button-header-order-now" onclick="window.location.href='/Frontend/Web/HTML/'">
-          <div class="order-now-text">
-            <p>ORDER NOW</p>
-          </div>
-          <img src="/Proyecto/Frontend/Web/src/icons/bagWhite.png" alt="" class="header-order-now-bag-img">
-        </button>
-      </div>
+      <!--Display our restaurants-->
+    <div class="our-menu-container">
+      <p class="our-menu-text">Our Restaurants</p>
+    </div>
 
       <section class="find-your-restaurant-section">
-          <h1 class="title ">Find your restaurant</h1>
+          <h1 class="title ">Find yours</h1>
           <!--CARD SANTA MONICA-->
           <div class="find-your-restaurant-card">
               <img src="/Proyecto/Frontend/Web/src/products/backgrounds/santa-monica-restaurant.png" alt="" class="find-your-restaurant-img">
@@ -351,19 +346,27 @@
           </div>
         </section>
 
+        <!--Sección Coming Soon-->
+        <section class="coming-soon-section">
+          <h1 class="title">Coming Soon</h1>
+          <div class="coming-soon-info-container">
+            <img src="/Proyecto/Frontend/Web/src/products/backgrounds/long-beach.jpg" alt="" class="coming-soon-img">
+            <p class="coming-soon-city">Long Beach</p>
+          </div>
+        </section>
+
+        <!--Sección de información del delivery-->
         <section class="section-delivery-info">
           <div class="delivery-img-container">
             <img src="/Proyecto/Frontend/Web/src/products/backgrounds/scooter.png" alt="" class="delivery-img">
           </div>
           <div class="delivery-title-container">
-            <p class="title delivery-title">Free delivery</p>
-            <p class="title delivery-title">on orders over $30</p>
+            <p class="title delivery-title">Free delivery on orders over $30</p>
           </div>
           <div class="delivery-text-container">
-              <p class="delivery-text">Place your order and we’ll handle</p>
-              <p class="delivery-text "> the shipping – FREE over $30.</p>
+              <p class="delivery-text">Place your order and we’ll handle the shipping – FREE over $30.</p>
           </div>
-          <p class="delivery-subtext">All deliveries made with electric</p> <p class="delivery-subtext">scooters – 0% emissions.</p>
+          <p class="delivery-subtext">All deliveries made with electric scooters – 0% emissions.</p>
           <button class="button-delivery-info" onclick="window.location.href='/HTML/'">
             View details!
           </button>

@@ -9,7 +9,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="/Proyecto/Frontend/Web/src/icons/logo-favicon.png">
-      <link rel="stylesheet" href="/Proyecto/Frontend/Web/CSS/menu.css">
+      <link rel="stylesheet" href="/Proyecto/Frontend/Web/CSS/contact-us.css">
       <script src="/Proyecto/Frontend/Web/JS/carouselNewReleases.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/neonEffect.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/subMenuChanges.js" defer></script>
@@ -172,8 +172,8 @@
            <p class="sign-up-info-subtitle">Log in to get discount codes, free shipping, exclusive products, and earn MeatPoints!</p>
          </div>
          <form id="login-form" method="POST" action="/login" class="sign-up-form">
-          <input type="email" id="login-email" name="email" placeholder="Email" required class="sign-up-form-input">
-          <input type="password" id="login-password" name="password" placeholder="Password" required class="sign-up-form-input">
+           <input type="email" id="login-email" name="email" placeholder="Email" required class="sign-up-form-input">
+           <input type="password" id="login-password" name="password" placeholder="Password" required class="sign-up-form-input">
            <button type="submit" class="sign-up-form-button">Log In</button>
            <div class="sign-up-policies-container">
              <p class="sign-up-policies-title">PRIVACY NOTICE</p>
@@ -187,223 +187,53 @@
            </div>
          </form>
        </div>
-      </div>
+     </div>
 
-  <!--Display our menu-->
-    <div class="our-menu-container">
-      <p class="our-menu-text">Our Menu</p>
+     <div class="main-background-container">
+      <img src="/Proyecto/Frontend/Web/src/products/backgrounds/backgroundImage.jpg" alt="" class="main-background-img">
+      <div class="gradient-bottom-background-img"></div>
     </div>
 
-  <!--Sección general info-->
-    <div class="seccion-general-productos">      
-      <!--Sección del menú disponible-->
-        <section class="section-all-menu">
-            <!--Sección de burgers-->
-          <div class="new-releases-container" id="carrusel">
-            <p class="title">Burgers</p>
-            <!--Carrusel new releases-->
-            <section class="carousel-section">
-              <div class="carousel-container">
-                <div id="carrusel" class="carrusel">
-                  <div class="carousel-element-card">
-                    <div class="carousel-card-content">
-                        <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger1.png" alt="">
-                      <p class="carousel-card-burger-name">Desktop Burger</p>
-                      <a href="" class="carousel-button-a">
-                        <p class="carousel-button-p">Taste me!</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="carousel-element-card">
-                    <div class="carousel-card-content">
-                        <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/newReleasesBurger1.png" alt="">
-                      <p class="carousel-card-burger-name">Desktop Burger</p>
-                      <a href="" class="carousel-button-a">
-                        <p class="carousel-button-p">Taste me!</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="carousel-element-card">
-                    <div class="carousel-card-content">
-                        <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger2.png" alt="">
-                      <p class="carousel-card-burger-name">Desktop Burger</p>
-                      <a href="" class="carousel-button-a">
-                        <p class="carousel-button-p">Taste me!</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="carousel-element-card">
-                    <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger3.png" alt="">
-                      <p class="carousel-card-burger-name">Desktop Burger</p>
-                      <a href="" class="carousel-button-a">
-                        <p class="carousel-button-p">Taste me!</p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-progress-container">
-                <div class="carousel-progress-bar"></div>
-              </div>
-            </section>
-          </div>
-            <!--Sección de packs to share-->
-            <div class="new-releases-container" id="carrusel">
-              <p class="title">Packs</p>
-              <!--Carrusel packs-->
-              <section class="carousel-section">
-                <div class="carousel-container">
-                  <div id="carrusel" class="carrusel">
-                    <div class="carousel-element-card">
-                      <div class="carousel-card-content">
-                          <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger1.png" alt="">
-                        <p class="carousel-card-burger-name">Desktop Burger</p>
-                        <a href="" class="carousel-button-a">
-                          <p class="carousel-button-p">Taste me!</p>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="carousel-element-card">
-                      <div class="carousel-card-content">
-                          <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/newReleasesBurger1.png" alt="">
-                        <p class="carousel-card-burger-name">Desktop Burger</p>
-                        <a href="" class="carousel-button-a">
-                          <p class="carousel-button-p">Taste me!</p>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="carousel-element-card">
-                      <div class="carousel-card-content">
-                          <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger2.png" alt="">
-                        <p class="carousel-card-burger-name">Desktop Burger</p>
-                        <a href="" class="carousel-button-a">
-                          <p class="carousel-button-p">Taste me!</p>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="carousel-element-card">
-                      <div class="carousel-card-content">
-                        <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger3.png" alt="">
-                        <p class="carousel-card-burger-name">Desktop Burger</p>
-                        <a href="" class="carousel-button-a">
-                          <p class="carousel-button-p">Taste me!</p>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-progress-container">
-                  <div class="carousel-progress-bar"></div>
-                </div>
-              </section>
-          </div>
-
-        <!--Sección de sides-->
-        <div class="new-releases-container" id="carrusel">
-          <p class="title">Sides</p>
-          <!--Carrusel sides-->
-          <section class="carousel-section">
-            <div class="carousel-container">
-              <div id="carrusel" class="carrusel">
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger1.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/newReleasesBurger1.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger2.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                    <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger3.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-progress-container">
-              <div class="carousel-progress-bar"></div>
-            </div>
-          </section>
+     <!--Seccion  formulario-->
+      <form action="/submit-form" method="POST" class="form-container">
+        <h2 class="title form-title">Contact Us</h2>
+        <div class="form-info-container">
+          <p class="form-info-text">We are so sorry you experienced an issue with your order, please describe your issue below.</p>
         </div>
+        <p class="form-subtext">Need more help? Send us a message</p>
+        <!-- Nombre -->
+        <label for="name"></label>
+        <input type="text" id="name" name="name" required placeholder="Name" class="form-input">
+
+        <!-- Email -->
+        <label for="email"></label>
+        <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input">
+        
+         <!-- Asunto o tipo de consulta -->
+        <label for="subject" class="form-subtext">Subject</label>
+        <select id="subject" name="subject" class="form-select-option">
+          <option value="">Please choose an option</option>
+          <option value="delivery">Delivery Time</option>
+          <option value="order">Inaccurate Order</option>
+          <option value="nutrition">Nutrition and Allergens</option>
+          <option value="other">Others</option>
+        </select>
+
+         <!-- Mensaje -->
+        <label for="message"></label>
+        <textarea type="text" id="message" name="message" placeholder="Describe your issue" class="form-input"></textarea>
       
-        <!--Sección de desserts-->
-        <div class="new-releases-container" id="carrusel">
-          <p class="title">Desserts</p>
-          <!--Carrusel desserts-->
-          <section class="carousel-section">
-            <div class="carousel-container">
-              <div id="carrusel" class="carrusel">
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger1.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/newReleasesBurger1.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger2.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                    <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger3.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-progress-container">
-              <div class="carousel-progress-bar"></div>
-            </div>
-          </section>
-        </div>
+        <!-- Policy -->
+        <label class="form-label-agree-policy">
+          <input type="checkbox" name="policy" required class="form-input-agree-policy">
+          <p class="form-input-policy-p">I agree to the following: <a href="">Privacy Policy</a> M&G legal terms <a href="">Terms of Service</a></p>
+        </label>
+      
+        <!-- Botón de envío -->
+        <button type="submit" class="form-button">Submit</button>
+      </form>
 
-      </section>
-
-      <!--Sección de información del delivery-->
+    <!--Sección de información del delivery-->
       <section class="section-delivery-info">
         <div class="delivery-img-container">
           <img src="/Proyecto/Frontend/Web/src/products/backgrounds/scooter.png" alt="" class="delivery-img">
@@ -507,6 +337,5 @@
           </div>
         </div>
       </section>
-    </div>
   </body>
 </html>

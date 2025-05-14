@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 ::after,
 ::before,
@@ -32,6 +33,7 @@ body.no-scroll {
     width: 100%;
 }
 
+/*Coockie banner*/
 #cookie-banner {
     display: flex;
     flex-direction: column;
@@ -45,7 +47,7 @@ body.no-scroll {
     color: #ffffff;
     padding: 5% 0;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
     transform: translateY(8px);
     display: block;
 }
@@ -70,27 +72,6 @@ body.no-scroll {
 
 #accept-btn {
     font-weight: 600;
-}
-
-.main-background-container {
-    display: grid;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: fit-content;
-}
-
-.main-background-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.gradient-bottom-background-img {
-    background: linear-gradient(180deg, hsla(201, 78%, 4%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
-    height: 20px;
-    width: 100%;
 }
 
 /*Header barra superior*/
@@ -209,7 +190,7 @@ body.no-scroll {
 .see-more-container {
     position: fixed;
     left: 0;
-    top: 4rem;
+    top: 3.5rem;
     background-color: #000910;
     border-radius: 10px;
     border: 1px solid #000000;
@@ -639,203 +620,153 @@ body.no-scroll {
     line-height: 1.4;
 }
 
-body.no-scroll {
-    overflow: hidden;
-}
-
-.main-text-header {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 7%;
-    line-height: 1.5;
-    width: 40%;
-}
-
-/*Display our menu*/
-.our-menu-container {
-    background-color: #c22828;
-    display: flex;
-    justify-content: center;
-    padding: 2%;
-}
-
-.our-menu-text {
-    font-size: 25px;
-    font-family: 'MundoModerno';
-}
-
-/* FInd your restaurant sección */
-.find-your-restaurant-section, .coming-soon-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10%;
-    gap: 10vw;
-}
-
 .title {
     margin: auto;
     color: #e22020;
     text-shadow: 0 0 5px #e22020, 0 0 15px #e22020, 0 0 30px #e22020;
     width: fit-content;
-    font-size: 30px;
+    font-size: 35px;
     font-family: 'Merienda';
     display: flex;
     flex-direction: column;
 }
 
-.find-your-restaurant-h1 {
-    padding: 10%;
-    padding-bottom: 0%;
-    color: #ffffff;
-    font-size: 7vw;
-    font-weight: bold;
+.title:hover {
+    filter: brightness(1.6);
 }
 
-.find-your-restaurant-card {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    border: 3px solid #ffffff;
-    border-radius: 10px;
-    width: 80%;
-    background-color: #9f0d0d;
-    color: #ffffff;
+/*Bacground image header*/
+.main-background-container {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: fit-content;
 }
 
-.find-your-restaurant-img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 5px solid #ffffff;
+.main-background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gradient-bottom-background-img {
+    background: linear-gradient(180deg, hsla(201, 78%, 4%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+    height: 20px;
     width: 100%;
 }
 
-.find-your-restaurant-card-info-container {
-    margin: 8%;
-}
-
-.find-your-restaurant-title {
-    font-size: 6vw;
-    color: #ffffff;
-}
-
-.find-your-restaurant-location {
-    margin: 5% 0;
-    margin-bottom: 2%;
-    font-size: 15px;
-    font-family: 'Monospace';
-}
-
-.find-your-restaurant-location-city {
-    font-size: 16px;
-    font-family: 'Monospace';
-}
-
-.find-your-restaurant-maps-link {
-    font-size: 15px;
-    margin-top: 5%;
-    text-decoration: underline;
-    color: #ffe8bf;
-    width: fit-content;
-}
-
-.find-your-restaurant-maps-link:hover {
-    color: #ffd181;
-}
-
-.find-your-restaurant-below-bar-container {
+/*Sección contacto*/
+.form-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 6%;
-}
-
-.find-your-restaurant-below-bar-button {
-    padding: 4%;
-    background-color: #f2f1f1;
-    color: #9f0d0d;
-    border-radius: 10px;
-    border: none;
-    margin: 0 8%;
-    text-wrap: nowrap;
-    font-weight: 900;
     font-family: 'Karla';
 }
 
-.find-your-restaurant-below-bar-button:hover {
-    background-color: #ffffff;
+.form-title {
+    margin-top: 5%;
 }
 
-.find-your-restaurant-icons-container {
-    display: flex;
-    justify-content: center;
-    gap: 3%;
-}
-
-.find-your-restaurant-icon-img {
-    width: 10%;
-}
-
-.call-now-hidden-pannel {
-    display: none;
-    background-color: #d92222;
-    color: #000000;
-    width: 70%;
-    height: 20%;
-    position: fixed;
-    top: 40%;
-    border-radius: 10px;
+.form-info-container {
     margin: 5%;
-    z-index: 1;
+    width: 80%;
+    border: 2px solid #e22020;
+    border-radius: 5px;
+    background-color: #000910;
+    padding: 4% 5%;
+    opacity: 0.95;
 }
 
-.call-now-number {
-    display: flex;
-    justify-content: center;
-    margin: 10% auto;
+.form-info-container:hover {
+    opacity: 1;
+}
+
+.form-info-text {
+    text-align: center;
     color: #ffffff;
-    width: fit-content;
-    font-family: 'Karla';
+    line-height: 1.5;
+    opacity: 1;
 }
 
-.copy-clipboard {
-    display: none;
+.form-subtext {
+    margin: 5%;
 }
 
-.call-now-below-options-container {
+input {
+    font-family: 'Karla'
+}
+
+.form-input {
+    margin: 3%;
+    width: 70%;
+    padding: 3%;
+    font-size: 1rem;
+    color: #000000;
+    border: 1px solid #e22020;
+    border-radius: 5px;
+}
+
+.form-input::placeholder {
+    color: #e22020;
+    font-family: 'Karla'
+}
+
+.form-select-option {
+    width: 70%;
+    padding: 2%;
+    border-radius: 5px;
+    border: 1px solid #f33434;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-label-agree-policy {
     display: flex;
-    gap: 5%;
-    justify-content: center;
-    flex-direction: row;
+    margin: 3%;
+    width: 80%;
 }
 
-.call-now-below-option {
-    width: 30%;
-    padding: 3% 5%;
-    border-radius: 10px;
-    border: 2px solid #9b2020;
-    background-color: #fa4229;
-    color: #ffffff
+input[type="checkbox"] {
+    accent-color: #f24242;
 }
 
-.call-now-below-option:hover {
-    background-color: #ff1e00;
+.form-input-agree-policy {
+    width: 20%;
 }
 
-.copy-message {
-  display: none;
-  text-align: center;
-  margin-top: 10px;
-  font-weight: bold;
-  color: green;
+.form-input-policy-p {
+    font-size: 10px;
+    line-height: 1.3;
+    margin: 0 4%;
 }
 
-/*Sección Coming Soon*/
-.coming-soon-section {
-    padding-top: 10%;
-    background-color: #000000;
+.form-input-policy-p a {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
+.form-input-policy-p a:hover {
+    color: #f33434;
+}
+
+.form-button {
+    width: 70%;
+    margin-top: 5%;
+    color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e22020;
+    background-color: #e22020;
+    padding: 3% 4%;
+}
+
+.form-button:hover {
+    background-color: #9f1616;
+    border: 1px solid #9f1616;
+}
 
 /*Sección Delivery*/
 .section-delivery-info {
@@ -844,8 +775,6 @@ body.no-scroll {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #000000;
-    padding-bottom: 10%;
 }
 
 .delivery-img-container {
@@ -910,10 +839,9 @@ body.no-scroll {
 /*Sección Footer*/
 .footer-section {
     display: flex;
+    margin-top: 10%;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: #000000;
-    
 }
 
 .footer-container {
