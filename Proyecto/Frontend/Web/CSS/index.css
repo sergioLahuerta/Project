@@ -1130,6 +1130,8 @@ body.no-scroll {
 .footer-legal-info-p {
     margin: 2%;
     font-size: 3vw;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .footer-below-pannel-last-line-container {

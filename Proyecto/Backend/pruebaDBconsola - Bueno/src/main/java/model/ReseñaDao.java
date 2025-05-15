@@ -4,57 +4,57 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class ValoracionDao implements iDao {
+public class ReseñaDao implements iDao {
     private final String SQL_FIND = "SELECT * FROM valoraciones WHERE 1=1 ";
     private IMotorSql motorSql;
 
-    public ValoracionDao() {
+    public ReseñaDao() {
         motorSql = new MotorSql();
     }
 
     @Override
     public int add(Object bean) {
-        Valoracion valoracion = (Valoracion) bean;
+        Reseña reseña = (Reseña) bean;
         String sql = "INSERT INTO valoraciones (id_cliente, id_producto, puntuacion, comentario) VALUES (" +
-                valoracion.getId_cliente() + ", " +
-                valoracion.getId_producto() + ", " +
-                valoracion.getPuntuacion() + ", '" +
-                valoracion.getComentario() + "')";
+                reseña.getId_cliente() + ", " +
+                reseña.getId_producto() + ", " +
+                reseña.getPuntuacion() + ", '" +
+                reseña.getComentario() + "')";
         motorSql.connect();
         return motorSql.executeUpdate(sql);
     }
 
     @Override
     public int delete(Object bean) {
-        Valoracion valoracion = (Valoracion) bean;
-        String sql = "DELETE FROM valoraciones WHERE id_valoracion = " + valoracion.getId_valoracion();
+        Reseña reseña = (Reseña) bean;
+        String sql = "DELETE FROM valoraciones WHERE id_valoracion = " + reseña.getId_valoracion();
         motorSql.connect();
         return motorSql.executeUpdate(sql);
     }
 
     @Override
     public int update(Object bean) {
-        Valoracion valoracion = (Valoracion) bean;
+        Reseña reseña = (Reseña) bean;
         String sql = "UPDATE valoraciones SET " +
-                "id_cliente = " + valoracion.getId_cliente() + ", " +
-                "id_producto = " + valoracion.getId_producto() + ", " +
-                "puntuacion = " + valoracion.getPuntuacion() + ", " +
-                "comentario = '" + valoracion.getComentario() + "' " +
-                "WHERE id_valoracion = " + valoracion.getId_valoracion();
+                "id_cliente = " + reseña.getId_cliente() + ", " +
+                "id_producto = " + reseña.getId_producto() + ", " +
+                "puntuacion = " + reseña.getPuntuacion() + ", " +
+                "comentario = '" + reseña.getComentario() + "' " +
+                "WHERE id_valoracion = " + reseña.getId_valoracion();
         motorSql.connect();
         return motorSql.executeUpdate(sql);
     }
 
     @Override
-    public ArrayList<Valoracion> FindAll(Object bean) {
-        ArrayList<Valoracion> valoraciones = new ArrayList<>();
+    public ArrayList<Reseña> FindAll(Object bean) {
+        ArrayList<Reseña> valoraciones = new ArrayList<>();
         String sql = SQL_FIND;
 
         try {
             motorSql.connect();
 
             if (bean != null) {
-                Valoracion v = (Valoracion) bean;
+                Reseña v = (Reseña) bean;
                 if (v.getId_valoracion() > 0) {
                     sql += " AND id_valoracion = " + v.getId_valoracion();
                 }
@@ -71,7 +71,7 @@ public class ValoracionDao implements iDao {
 
             ResultSet rs = motorSql.executeQuery(sql);
             while (rs.next()) {
-                Valoracion v = new Valoracion();
+                Reseña v = new Reseña();
                 v.setId_valoracion(rs.getInt("id_valoracion"));
                 v.setId_cliente(rs.getInt("id_cliente"));
                 v.setId_producto(rs.getInt("id_producto"));

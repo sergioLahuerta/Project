@@ -1,16 +1,18 @@
 package org.example;
 
 
-import model.Carrito;
-import model.CarritoDao;
-import model.Producto;
-import model.ProductoDao;
+import model.*;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class Main {
 
         public static void main(String args[]){
+            IMotorSql motorSql = new MotorSql();
+            motorSql.connect();
+            String sqlQuery = "SELECT * FROM productos";
+            ResultSet rs = motorSql.executeQuery(sqlQuery);
             ProductoDao pro = new ProductoDao();
             ArrayList<Producto> productos = pro.FindAll(null);
             if (productos.isEmpty()) {

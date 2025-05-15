@@ -193,16 +193,6 @@ CREATE TABLE Pagos (
 );
 
 /* TABLA PARA ALERTAS DE STOCK BAJO */
-CREATE TABLE IF NOT EXISTS Alertas_Stock (
-    ID_Alerta INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Ingrediente INT NOT NULL,
-    FechaAlerta DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    StockDisponible DECIMAL(10,2),
-    Mensaje TEXT,
-    FOREIGN KEY (ID_Ingrediente) REFERENCES Ingredientes(ID_Ingrediente)
-);
-
-/* PROCEDIMIENTO PARA DETECTAR STOCK BAJO */
 DELIMITER $$
 
 CREATE PROCEDURE RevisarStockBajo()
@@ -216,6 +206,7 @@ BEGIN
     WHERE StockDisponible < 10;
 END$$
 
+-- Restaurar delimitador normal
 DELIMITER ;
 
 /* LLAMADA AL PROCEDIMIENTO */

@@ -2,7 +2,7 @@ package model;
 
 import java.sql.Timestamp;
 
-    public class Valoracion {
+    public class Reseña {
         private int id_valoracion;
         private int id_cliente;
         private int id_producto;
@@ -10,9 +10,9 @@ import java.sql.Timestamp;
         private String comentario;
         private Timestamp fecha_valoracion;
 
-        public Valoracion() {}
+        public Reseña() {}
 
-        public Valoracion(int id_valoracion, int id_cliente, int id_producto, int puntuacion, String comentario) {
+        public Reseña(int id_valoracion, int id_cliente, int id_producto, int puntuacion, String comentario) {
             this.id_valoracion = id_valoracion;
             this.id_cliente = id_cliente;
             this.id_producto = id_producto;
