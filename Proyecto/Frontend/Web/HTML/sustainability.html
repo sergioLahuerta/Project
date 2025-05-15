@@ -9,7 +9,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="/Proyecto/Frontend/Web/src/icons/logo-favicon.png">
-      <link rel="stylesheet" href="/Proyecto/Frontend/Web/CSS/work-with-us.css">
+      <link rel="stylesheet" href="/Proyecto/Frontend/Web/CSS/sustainability.css">
       <script src="/Proyecto/Frontend/Web/JS/neonEffect.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/subMenuChanges.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/coockies.js" defer></script>
@@ -87,9 +87,9 @@
                 </div>
                 <hr class="see-more-content-hr">
                 <div class="see-more-refers-container">
-                  <p class="see-more-refer">Meat Points</p>
-                  <p class="see-more-refer">Coming Soon</p>
-                  <p class="see-more-refer">Frequently asked questions</p>
+                  <a href="/Proyecto/Frontend/Web/HTML/rewards.html#meatpoints" class="see-more-refer">Meat Points</a>
+                  <a href="/Proyecto/Frontend/Web/HTML/restaurants.html#coming-soon" class="see-more-refer">Coming Soon</a>
+                  <a href="/Proyecto/Frontend/Web/HTML/faq.html" class="see-more-refer">Frequently asked questions</a>
                 </div>
               </div>                  
             </li>
@@ -188,104 +188,41 @@
        </div>
      </div>
 
-     <div class="main-background-container">
-      <img src="/Proyecto/Frontend/Web/src/products/backgrounds/backgroundImage.jpg" alt="" class="main-background-img">
-      <div class="gradient-bottom-background-img"></div>
+    <!--Display Sustainability-->
+    <div class="our-sustainability-container">
+        <p class="our-sustainability-text">Sustainability</p>
     </div>
 
-    <!--Seccion oferta trabajo-->
-    <section class="section-job-offer">
-        <h2 class="title job-offer-title">Join Our Team</h2>
-        <div class="job-offer-img-container">
-            <img src="/Proyecto/Frontend/Web/src/products/backgrounds/job-offer.png" alt="" class="job-offer-img">
+    <!--Sección Sustainability-->
+    <section class="sust-section">
+        <div class="sust-info-container">
+            <img src="/Proyecto/Frontend/Web/src/icons/grifo.png" alt="" class="sust-info-img">
+            <p class="sust-info-title">One Drop at a Time</p>
+            <p class="sust-info-text">We take water seriously. In our kitchens, we use high-efficiency faucets and water-saving techniques to minimize waste during food prep and cleaning. Every drop counts because caring for the planet is part of our recipe.</p>
         </div>
-        <div class="job-offer-img-container">
-            <img src="/Proyecto/Frontend/Web/src/products/backgrounds/job-offer2.png" alt="" class="job-offer-img">
+        <div class="sust-info-container">
+            <img src="/Proyecto/Frontend/Web/src/icons/vaca.png" alt="" class="sust-info-img">
+            <p class="sust-info-title">Happy Cows, Better Burgers</p>
+            <p class="sust-info-text">We partner with farms that treat their cows right, no shortcuts, no cruelty, no weird stuff. Just grass, space, and care. That’s how we get beef that’s not only delicious but feels right too.</p>
         </div>
-    </section>
-
-     <!--Seccion  formulario-->
-      <form action="/submit-form" method="POST" class="form-container">
-        <h2 class="title form-title">Apply Now</h2>
-        <p class="form-subtext">Send us your application</p>
-        
-        <!-- Restaurante -->
-        <label for="candidacy" class="form-subtext candidacy"></label>
-        <select id="candidacy" name="candidacy" class="form-select-option">
-          <option value="">Please choose a restaurant</option>
-          <option value="santa-monica">Santa Monica</option>
-          <option value="downtown">Downtown</option>
-          <option value="silver-lake">Silver Lake</option>
-          <option value="west-hollywood">West Hollywood</option>
-          <option value="culver-city">Culver City</option>
-        </select>
-
-        <!-- Empleo -->
-        <label for="job" class="form-subtext candidacy"></label>
-        <select id="job" name="job" class="form-select-option">
-          <option value="">Please choose a job</option>
-          <option value="Chef">Chef</option>
-          <option value="web-developper">Web Developper</option>
-        </select>
-
-        <!-- Nombre -->
-        <label for="name"></label>
-        <input type="text" id="name" name="name" required placeholder="Name" class="form-input">
-
-        <!-- Nombre -->
-        <label for="last-name"></label>
-        <input type="text" id="last-name" name="last-name" required placeholder="Last Name" class="form-input">
-
-        <!-- Email -->
-        <label for="email"></label>
-        <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input">
-
-        <!-- Adjuntar CV -->
-        <label for="cv" class="custom-file-label">
-            Upload Your CV
-        </label>
-        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required class="form-input">
-      
-        <!-- Policy -->
-        <label class="form-label-agree-policy">
-          <input type="checkbox" name="policy" required class="form-input-agree-policy">
-          <p class="form-input-policy-p">I have read, understood, and agree to the <a href="">Terms and Conditions</a></p>
-        </label>
-      
-        <!-- Botón de envío -->
-        <button type="submit" class="form-button">Submit</button>
-      </form>
-
-    <!--Sección Careers-->
-    <section id="careers" class="career-section">
-      <div class="career-info-container">
-        <p class="career-info-title title">Grow With Us</p>
-        <p class="career-info-text">Joining our team is more than just a job, it’s a real opportunity. We believe in promoting from within, recognizing talent, and helping every team member grow personally and professionally. With a fair salary, ongoing support, and a great working environment, we make sure your future looks just as good as our burgers.</p>
-        <img src="/Proyecto/Frontend/Web/src/products/backgrounds/workers.jpg" alt="" class="career-info-img">
-      </div>
-    </section>
-
-    <!--Sección Partners & Collaborators-->
-    <section id="partners" class="partner-section">
-      <div class="partner-info-container">
-        <p class="partner-info-title title">Partners & Collaborator</p>
-        <div class="partner-info-img-container">
-          <img src="/Proyecto/Frontend/Web/src/icons/FedEx.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/mastercard.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/target.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/paypal.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/h&m.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/suzuki.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/oracle.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/shell.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/winston.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/breadLA.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/LAcompost.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/apricot-lane-farms.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/toast.png" alt="" class="partner-info-img">
-          <img src="/Proyecto/Frontend/Web/src/icons/LATTC.png" alt="" class="partner-info-img">
+        <div class="sust-info-container">
+            <img src="/Proyecto/Frontend/Web/src/icons/envases.png" alt="" class="sust-info-img">
+            <p class="sust-info-title">Our Packaging Has a Second Life</p>
+            <p class="sust-info-text">All our containers are designed to be recycled or reused. We avoid plastics, use plant-based materials, and encourage our customers to recycle or bring them back. Less waste, more taste.</p>
         </div>
-      </div>
+        <div class="sust-info-container">
+            <img src="/Proyecto/Frontend/Web/src/icons/petroleo.png" alt="" class="sust-info-img">
+            <p class="sust-info-title">Minimal Oil, Maximum Flavor</p>
+            <p class="sust-info-text">Our entire production process is designed to minimize the use of petroleum-based resources, from packaging to preparation. That means cleaner logistics, smarter sourcing, and a lower carbon footprint compared to traditional burger chains.</p>
+        </div>
+        <div id="scooter-sustainability" class="sust-info-container">
+            <img src="/Proyecto/Frontend/Web/src/icons/scooterSustainability.png" alt="" class="sust-info-img">
+            <p class="sust-info-title">Silent, Clean, Electric</p>
+            <p class="sust-info-text">All our deliveries are powered by 100% electric motorcycles. That means zero emissions, less noise, and a lighter footprint on the planet. Because great burgers taste even better when they’re delivered sustainably.</p>
+            <div class="sust-info-img-below-container">
+              <img src="/Proyecto/Frontend/Web/src/products/backgrounds/scooter-real.png" alt="" class="sust-info-img-below">
+            </div>
+        </div>
     </section>
 
       <!--Sección del footer-->
@@ -356,10 +293,10 @@
               </label>
             </div>
             <div class="footer-pannel-drop-down">
-              <a href="#">Contact Us</a>
-              <a href="#">FAQ</a>
+              <a href="/Proyecto/Frontend/Web/HTML/contact-us.html">Contact Us</a>
+              <a href="/Proyecto/Frontend/Web/HTML/faq.html">FAQ</a>
               <a href="#">Refunds & Returns</a>
-              <a href="#">Work With Us</a>
+              <a href="/Proyecto/Frontend/Web/HTML/work-with-us.html">Work With Us</a>
             </div>
           </div>
         </div>

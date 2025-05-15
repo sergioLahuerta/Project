@@ -14,6 +14,7 @@
       <script src="/Proyecto/Frontend/Web/JS/subMenuChanges.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/coockies.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/sign-up.js" defer></script>
+      <script src="/Proyecto/Frontend/Web/JS/footer.js" defer></script>
       <title>Meat & Grill</title>
   </head>
   <body>
@@ -73,23 +74,23 @@
                 </div>
                 <!--<hr class="see-more-content-hr">-->
                 <div class="see-more-content contact-us">
-                  <a href="" class="see-more-content-a">
+                  <a href="/Proyecto/Frontend/Web/HTML/contact-us.html" class="see-more-content-a">
                     <p>Contact Us</p>
                     <img src="/Proyecto/Frontend/Web/src/icons/contactUsWhite.png" alt="" class="img-icon-see-more-content">
                   </a>
                 </div>
                 <!--<hr class="see-more-content-hr">-->
                 <div class="see-more-content work-with-us">
-                  <a href="" class="see-more-content-a">
+                  <a href="/Proyecto/Frontend/Web/HTML/work-with-us.html" class="see-more-content-a">
                     <p>Work With Us</p>
                     <img src="/Proyecto/Frontend/Web/src/icons/workWithUsWhite.png" alt="" class="img-icon-see-more-content">
                   </a>
                 </div>
                 <hr class="see-more-content-hr">
                 <div class="see-more-refers-container">
-                  <p class="see-more-refer">Meat Points</p>
-                  <p class="see-more-refer">Coming Soon</p>
-                  <p class="see-more-refer">Frequently asked questions</p>
+                  <a href="/Proyecto/Frontend/Web/HTML/rewards.html#meatpoints" class="see-more-refer">Meat Points</a>
+                  <a href="/Proyecto/Frontend/Web/HTML/restaurants.html#coming-soon" class="see-more-refer">Coming Soon</a>
+                  <a href="/Proyecto/Frontend/Web/HTML/faq.html" class="see-more-refer">Frequently asked questions</a>
                 </div>
               </div>                  
             </li>
@@ -195,21 +196,133 @@
 
     <!--FAQ-->
     <section class="faq-section">
-        <div class="faq-pannel-group">
-            <input type="checkbox" id="faq-products-services" class="footer-pannel-toggle">
+      <!--Pregunta delivery time-->
+        <div id="shipping&delivery" class="faq-pannel-group">
+            <input type="checkbox" id="faq-delivery-time" class="faq-pannel-toggle">
             <div class="faq-pannel-row">
-              <p class="footer-pannel-row-title">How long will it take to receive my order?</p>
-              <label for="faq-products-services" class="footer-pannel-row-link">
-                <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="footer-pannel-row-img">
-                <img src="/Proyecto/Frontend/Web/src/icons/menos.png" alt="" class="footer-pannel-row-img img-hover">
+              <p class="faq-pannel-row-title">How long will it take to receive my order?</p>
+              <label for="faq-delivery-time" class="faq-pannel-row-link">
+                <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="faq-pannel-row-img">
+                <img src="/Proyecto/Frontend/Web/src/icons/menosFAQ.png" alt="" class="faq-pannel-row-img img-hover">
               </label>
             </div>
             <div class="faq-pannel-drop-down">
-              <p>Our average delivery time is approximately 30 minutes. Occasionally, we may receive a large volume order before yours, which may delay your order preparation by 5-10 minutes. Our policies guarantee that the distribution of each order takes place immediately after it has been prepared, as we want to deliver you the best product, with the best quality and in the shortest possible time.</p>
+              <p>Our average delivery time is <strong>approximately 30 minutes.</strong> Occasionally, we may receive a large volume order before yours, which may delay your order preparation by 5-10 minutes. Our policies guarantee that the distribution of each order takes place immediately after it has been prepared, as we want to deliver you the best product, with the best quality and in the shortest possible time.</p>
             </div>
           </div>
+      <!--Pregunta mantener materia prima a temperatura adecuada-->
+        <div class="faq-pannel-group">
+          <input type="checkbox" id="faq-food-temp" class="faq-pannel-toggle">
+          <div class="faq-pannel-row">
+            <p class="faq-pannel-row-title">How do you manage to keep the food hot and fresh during distribution?</p>
+            <label for="faq-food-temp" class="faq-pannel-row-link">
+              <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="faq-pannel-row-img">
+              <img src="/Proyecto/Frontend/Web/src/icons/menosFAQ.png" alt="" class="faq-pannel-row-img img-hover">
+            </label>
+          </div>
+          <div class="faq-pannel-drop-down">
+            <p>Our transport system was specially created to ensure that we keep our products hot and that they arrive at the right temperature for you to enjoy, regardless of the product.</p>
+          </div>
+        </div>
+        <!--Pregunta devoluciones-->
+        <div id="returns" class="faq-pannel-group">
+          <input type="checkbox" id="faq-returns" class="faq-pannel-toggle">
+          <div class="faq-pannel-row">
+            <p class="faq-pannel-row-title">Can I return my order?</p>
+            <label for="faq-returns" class="faq-pannel-row-link">
+              <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="faq-pannel-row-img">
+              <img src="/Proyecto/Frontend/Web/src/icons/menosFAQ.png" alt="" class="faq-pannel-row-img img-hover">
+            </label>
+          </div>
+          <div class="faq-pannel-drop-down">
+            <p>We accept refund or return requests within 1 hour of receiving your order. Items must be unused and in their original condition. Please note that gift cards and perishable items are non-refundable. For assistance, contact our customer support team as soon as possible.</p>
+          </div>
+        </div>
+        <!--Pregunta personalizar hamburguesa-->
+        <div class="faq-pannel-group">
+          <input type="checkbox" id="faq-custom-burger" class="faq-pannel-toggle">
+          <div class="faq-pannel-row">
+            <p class="faq-pannel-row-title">Can I customize my burger?</p>
+            <label for="faq-custom-burger" class="faq-pannel-row-link">
+              <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="faq-pannel-row-img">
+              <img src="/Proyecto/Frontend/Web/src/icons/menosFAQ.png" alt="" class="faq-pannel-row-img img-hover">
+            </label>
+          </div>
+          <div class="faq-pannel-drop-down">
+            <p>Of course! You can remove, change, or add ingredients to your liking from our digital menu. We want you to have exactly what you're craving.</p>
+          </div>
+        </div>
+        <!--Pregunta area no cubierta por nuestro servicio-->
+        <div class="faq-pannel-group">
+          <input type="checkbox" id="faq-deliver-area" class="faq-pannel-toggle">
+          <div class="faq-pannel-row">
+            <p class="faq-pannel-row-title">Why don't you deliver to my area?</p>
+            <label for="faq-deliver-area" class="faq-pannel-row-link">
+              <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="faq-pannel-row-img">
+              <img src="/Proyecto/Frontend/Web/src/icons/menosFAQ.png" alt="" class="faq-pannel-row-img img-hover">
+            </label>
+          </div>
+          <div class="faq-pannel-drop-down">
+            <p>We are expanding our service to other areas and cities as soon as possible, but we always try to ensure that we have all our operations in place to guarantee the delivery of the best service and the best products in the best conditions. For now, we are in LA but keep hungry because we will open soon in San Diego and Las Vegas too.</p>
+          </div>
+        </div>
+        <!--Pregunta coste del envío-->
+        <div class="faq-pannel-group">
+          <input type="checkbox" id="faq-delivery-cost" class="faq-pannel-toggle">
+          <div class="faq-pannel-row">
+            <p class="faq-pannel-row-title">Does the home delivery service cost?</p>
+            <label for="faq-delivery-cost" class="faq-pannel-row-link">
+              <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="faq-pannel-row-img">
+              <img src="/Proyecto/Frontend/Web/src/icons/menosFAQ.png" alt="" class="faq-pannel-row-img img-hover">
+            </label>
+          </div>
+          <div class="faq-pannel-drop-down">
+            <p>The delivery of the order may involve shipping costs or other costs which will be informed before the confirmation and payment of the order depending on the minimum amount established or other concepts. Anyways, you must know that all orders of minimum 30$ are free to delivery costs.</p>
+          </div>
+        </div>
+        <!--Pregunta display flex-->
+        <div class="faq-pannel-group">
+          <input type="checkbox" id="faq-display-flex" class="faq-pannel-toggle">
+          <div class="faq-pannel-row">
+            <p class="faq-pannel-row-title">What is the "Display Flex" burger and why does it have a paper wrapper around it?</p>
+            <label for="faq-display-flex" class="faq-pannel-row-link">
+              <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="faq-pannel-row-img">
+              <img src="/Proyecto/Frontend/Web/src/icons/menosFAQ.png" alt="" class="faq-pannel-row-img img-hover">
+            </label>
+          </div>
+          <div class="faq-pannel-drop-down">
+            <p>The "Display Flex" is one of our most special burgers: it's wrapped in ultra-thin edible paper that lets you eat it without making a mess. This paper keeps the ingredients in place and can be chewed along with the burger, without altering the flavor. Ideal for those who don't want to stop even to clean their hands!</p>
+          </div>
+        </div>
+        <!--Pregunta productos veganos-->
+        <div class="faq-pannel-group">
+          <input type="checkbox" id="faq-vegan-products" class="faq-pannel-toggle">
+          <div class="faq-pannel-row">
+            <p class="faq-pannel-row-title">Do you have vegetarian or vegan options?</p>
+            <label for="faq-vegan-products" class="faq-pannel-row-link">
+              <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="faq-pannel-row-img">
+              <img src="/Proyecto/Frontend/Web/src/icons/menosFAQ.png" alt="" class="faq-pannel-row-img img-hover">
+            </label>
+          </div>
+          <div class="faq-pannel-drop-down">
+            <p>Yes, we offer 100% vegetarian and vegan burgers made with fresh and tasty ingredients. You can also customize any burger to suit your dietary needs.</p>
+          </div>
+        </div>
+        <!--Pregunta pedir desde movil-->
+        <div class="faq-pannel-group">
+          <input type="checkbox" id="faq-mobile-order" class="faq-pannel-toggle">
+          <div class="faq-pannel-row">
+            <p class="faq-pannel-row-title">Can I place an order from my mobile phone?</p>
+            <label for="faq-mobile-order" class="faq-pannel-row-link">
+              <img src="/Proyecto/Frontend/Web/src/icons/mas.png" alt="" class="faq-pannel-row-img">
+              <img src="/Proyecto/Frontend/Web/src/icons/menosFAQ.png" alt="" class="faq-pannel-row-img img-hover">
+            </label>
+          </div>
+          <div class="faq-pannel-drop-down">
+            <p>Yes. You can order from our website or from our official website, available on iOS and Android. Your burger is just a few clicks away!</p>
+          </div>
+        </div>
     </section>
-   
 
       <!--Sección del footer-->
       <section class="footer-section">
@@ -279,10 +392,10 @@
               </label>
             </div>
             <div class="footer-pannel-drop-down">
-              <a href="#">Contact Us</a>
-              <a href="#">FAQ</a>
+              <a href="/Proyecto/Frontend/Web/HTML/contact-us.html">Contact Us</a>
+              <a href="/Proyecto/Frontend/Web/HTML/faq.html">FAQ</a>
               <a href="#">Refunds & Returns</a>
-              <a href="#">Work With Us</a>
+              <a href="/Proyecto/Frontend/Web/HTML/work-with-us.html">Work With Us</a>
             </div>
           </div>
         </div>

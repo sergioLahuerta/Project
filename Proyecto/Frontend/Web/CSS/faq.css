@@ -300,6 +300,8 @@ body.no-scroll {
     margin: 2% 0;
     width: fit-content;
     font-size: 12px;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .see-more-refer::after {
@@ -657,11 +659,6 @@ body.no-scroll {
 .faq-pannel-group {
     display: flex;
     flex-direction: column;
-    margin: 5% 0;
-}
-
-.faq-pannel-toggle {
-
 }
 
 .faq-pannel-row {
@@ -669,40 +666,39 @@ body.no-scroll {
     width: -webkit-fill-available;
     justify-content: space-between;
     align-items: center;
-    padding: 3%;
-    border-top: 1px solid #e24e24;
-    border-bottom: 1px solid #e24e24;
-}
-
-.faq-pannel-row-title {
-
-}
-
-.faq-pannel-row-link {
-
-}
-
-.faq-pannel-row-img {
-
+    padding: 7% 6%;
+    border-bottom: 3px solid #e24e24;
 }
 
 .faq-pannel-drop-down {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
     flex-direction: column;
-    transition: max-height 0.5s ease;
-    margin: 1rem 0;
+    transition: transform 0.5s ease;
+    padding: 0% 6%;
+    font-family: 'Karla';
+    font-size: 14px;
+    line-height: 1.3;
+    transform: translateY(-30px);
+    opacity: 0;
 }
 
 .faq-pannel-drop-down p {
-    width: 80%;
-}
-
-.faq-pannel-row-img img-hover {
-
+    width: 100%;
 }
 
 .faq-pannel-toggle:checked ~ .faq-pannel-drop-down {
+    max-height: 500px;
     display: flex;
+    padding: 4% 6%;
+    transform: translateX(0);
+    opacity: 1;
+    border-bottom: 3px solid #e22020;
+}
+
+.faq-pannel-toggle:checked ~ .faq-pannel-row {
+    border-bottom: none;
+    color: #ff9696;
 }
 
 .faq-pannel-toggle:checked + .faq-pannel-row .img-hover:nth-child(2) {
@@ -777,22 +773,22 @@ body.no-scroll {
     align-items: center;
 }
 
-.footer-pannel-row-title {
+.footer-pannel-row-title, .faq-pannel-row-title {
     font-size: 1rem;
     font-family: 'Karla';
 }
 
-.footer-pannel-toggle {
+.footer-pannel-toggle, .faq-pannel-toggle {
     display: none;
 }
 
-.footer-pannel-row-link {
+.footer-pannel-row-link, .faq-pannel-row-link {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.footer-pannel-row-img {
+.footer-pannel-row-img, .faq-pannel-row-img {
     width: 0.8rem;
 }
 

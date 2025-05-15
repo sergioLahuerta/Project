@@ -676,6 +676,7 @@ body.no-scroll {
     width: 100%;
     background-size: contain;
     border-radius: 5px;
+    margin: 5% 0;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.25);
 }
 
@@ -786,6 +787,50 @@ input[type="checkbox"] {
 .form-button:hover {
     background-color: #a72323;
     border: 1px solid #a72323;
+}
+
+/*Sección Careers & Partners*/
+.career-section, .partner-section {
+    width: 80%;
+    margin: auto;
+}
+
+.career-info-container, .partner-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Karla';
+}
+
+.career-info-title, .partner-info-title {
+    
+    margin: 5% 0;
+    margin-top: 20%;
+}
+
+.career-info-text {
+    font-size: 1rem;
+    margin: 5%;
+    line-height: 1.6;
+}
+
+.career-info-img {
+    width: 80%;
+    margin: 5%;
+    border: 2px solid #e95454;
+    border-radius: 10px;
+}
+
+.partner-info-img-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.partner-info-img {
+    width: 30%;
+    margin: 10%;
 }
 
 /*Sección Footer*/
