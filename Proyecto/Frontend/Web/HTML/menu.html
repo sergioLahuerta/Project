@@ -15,6 +15,7 @@
       <script src="/Proyecto/Frontend/Web/JS/subMenuChanges.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/coockies.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/sign-up.js" defer></script>
+      <script src="/Proyecto/Frontend/Web/JS/fetch.js" defer></script>
       <title>Meat & Grill</title>
   </head>
   <body>
@@ -198,104 +199,22 @@
     <div class="seccion-general-productos">      
       <!--Sección del menú disponible-->
         <section class="section-all-menu">
+
             <!--Sección de burgers-->
           <div class="new-releases-container" id="carrusel">
             <p class="title">Burgers</p>
-            <!--Carrusel new releases-->
-            <section class="carousel-section">
-              <div class="carousel-container">
-                <div id="carrusel" class="carrusel">
-                  <div class="carousel-element-card">
-                    <div class="carousel-card-content">
-                        <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger1.png" alt="">
-                      <p class="carousel-card-burger-name">Desktop Burger</p>
-                      <a href="" class="carousel-button-a">
-                        <p class="carousel-button-p">Taste me!</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="carousel-element-card">
-                    <div class="carousel-card-content">
-                        <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/newReleasesBurger1.png" alt="">
-                      <p class="carousel-card-burger-name">Desktop Burger</p>
-                      <a href="" class="carousel-button-a">
-                        <p class="carousel-button-p">Taste me!</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="carousel-element-card">
-                    <div class="carousel-card-content">
-                        <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger2.png" alt="">
-                      <p class="carousel-card-burger-name">Desktop Burger</p>
-                      <a href="" class="carousel-button-a">
-                        <p class="carousel-button-p">Taste me!</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="carousel-element-card">
-                    <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger3.png" alt="">
-                      <p class="carousel-card-burger-name">Desktop Burger</p>
-                      <a href="" class="carousel-button-a">
-                        <p class="carousel-button-p">Taste me!</p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-progress-container">
-                <div class="carousel-progress-bar"></div>
-              </div>
+            <!--Carrusel Burgers-->
+            <section id="carrusel-categoria-1" class="carousel-section">
+              
             </section>
           </div>
-            <!--Sección de packs to share-->
+            <!--Sección de drinks to share-->
             <div class="new-releases-container" id="carrusel">
-              <p class="title">Packs</p>
-              <!--Carrusel packs-->
-              <section class="carousel-section">
-                <div class="carousel-container">
-                  <div id="carrusel" class="carrusel">
-                    <div class="carousel-element-card">
-                      <div class="carousel-card-content">
-                          <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger1.png" alt="">
-                        <p class="carousel-card-burger-name">Desktop Burger</p>
-                        <a href="" class="carousel-button-a">
-                          <p class="carousel-button-p">Taste me!</p>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="carousel-element-card">
-                      <div class="carousel-card-content">
-                          <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/newReleasesBurger1.png" alt="">
-                        <p class="carousel-card-burger-name">Desktop Burger</p>
-                        <a href="" class="carousel-button-a">
-                          <p class="carousel-button-p">Taste me!</p>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="carousel-element-card">
-                      <div class="carousel-card-content">
-                          <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger2.png" alt="">
-                        <p class="carousel-card-burger-name">Desktop Burger</p>
-                        <a href="" class="carousel-button-a">
-                          <p class="carousel-button-p">Taste me!</p>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="carousel-element-card">
-                      <div class="carousel-card-content">
-                        <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger3.png" alt="">
-                        <p class="carousel-card-burger-name">Desktop Burger</p>
-                        <a href="" class="carousel-button-a">
-                          <p class="carousel-button-p">Taste me!</p>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-progress-container">
-                  <div class="carousel-progress-bar"></div>
-                </div>
+              <p class="title">Drinks</p>
+
+              <!--Carrusel Drinks-->
+              <section id="carrusel-categoria-2" class="carousel-section">
+                
               </section>
           </div>
 
@@ -303,50 +222,8 @@
         <div class="new-releases-container" id="carrusel">
           <p class="title">Sides</p>
           <!--Carrusel sides-->
-          <section class="carousel-section">
-            <div class="carousel-container">
-              <div id="carrusel" class="carrusel">
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger1.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/newReleasesBurger1.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger2.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                    <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger3.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-progress-container">
-              <div class="carousel-progress-bar"></div>
-            </div>
+          <section id="carrusel-categoria-3" class="carousel-section">
+            
           </section>
         </div>
       
@@ -354,50 +231,8 @@
         <div class="new-releases-container" id="carrusel">
           <p class="title">Desserts</p>
           <!--Carrusel desserts-->
-          <section class="carousel-section">
-            <div class="carousel-container">
-              <div id="carrusel" class="carrusel">
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger1.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/newReleasesBurger1.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                      <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger2.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="carousel-element-card">
-                  <div class="carousel-card-content">
-                    <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger3.png" alt="">
-                    <p class="carousel-card-burger-name">Desktop Burger</p>
-                    <a href="" class="carousel-button-a">
-                      <p class="carousel-button-p">Taste me!</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-progress-container">
-              <div class="carousel-progress-bar"></div>
-            </div>
+          <section id="carrusel-categoria-4" class="carousel-section">
+            
           </section>
         </div>
 

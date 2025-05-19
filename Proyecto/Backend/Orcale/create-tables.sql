@@ -1,3 +1,5 @@
+DROP SCHEMA IF EXISTS esquema_reto;
+CREATE SCHEMA esquema_reto;
 USE esquema_reto;
 
 /*DROP TABLES*/
@@ -9,7 +11,7 @@ DROP TABLE IF EXISTS
     Facturas,
     Detalles_Pedidos,
     Pedidos,
-    Reseñas,
+    Resenas,
     Empleados,
     Proveedores_Ingredientes,
     Productos_Ingredientes,
@@ -33,12 +35,14 @@ CREATE TABLE Ofertas (
     ID_Oferta INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(100) NOT NULL,
     Precio DECIMAL(10,2) NOT NULL,
-    Descripcion TEXT
+    Descripcion TEXT,
+    columnaImagen VARCHAR(255),
+    fechaExpiracion DATE NOT NULL
 );
 
 CREATE TABLE Productos (
     ID_Producto INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Oferta INT NOT NULL,
+    ID_Oferta INT,
     ID_Categoria INT NOT NULL,
     Nombre VARCHAR(100) NOT NULL,
     Precio DECIMAL(10,2) NOT NULL,
@@ -53,7 +57,7 @@ CREATE TABLE Ingredientes (
     UnidadMedida VARCHAR(50),
     StockDisponible DECIMAL(10,2) NOT NULL,
     TipoAlmacenamiento VARCHAR(50),
-    Disponible BOOLEAN NOT NULL
+    EstaActivo BOOLEAN NOT NULL
 );
 
 CREATE TABLE Productos_Ingredientes (
@@ -67,7 +71,9 @@ CREATE TABLE Productos_Ingredientes (
 
 CREATE TABLE Proveedores (
     ID_Proveedor INT AUTO_INCREMENT PRIMARY KEY,
-    nombreEmpresa VARCHAR(100) NOT NULL
+    nombreEmpresa VARCHAR(100) NOT NULL,
+    Telefono VARCHAR(100) NOT NULL,
+    Email VARCHAR(100)
 );
 
 CREATE TABLE Almacen (
@@ -93,7 +99,8 @@ CREATE TABLE Restaurante (
     Direccion VARCHAR(200),
     Telefono VARCHAR(20),
     Email VARCHAR(100),
-    Aforo INT
+    Aforo INT,
+    imagenRestaurante VARCHAR(250)
 );
 
 CREATE TABLE Empleados (
@@ -110,16 +117,16 @@ CREATE TABLE Empleados (
 
 CREATE TABLE Usuarios (
     ID_Usuario INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(100) NOT NULL,
-    Email VARCHAR(100) NOT NULL,
-    Sexo ENUM('M','F','Otro'),
-    DNI VARCHAR(20) NOT NULL,
+    Nombre VARCHAR(100),
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Contrasena VARCHAR(255) NOT NULL,
+    DNI VARCHAR(20),
     Telefono VARCHAR(20),
     Direccion VARCHAR(200)
 );
 
-CREATE TABLE Reseñas (
-    ID_Reseña INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE Resenas (
+    ID_Resena INT AUTO_INCREMENT PRIMARY KEY,
     ID_Usuario INT NOT NULL,
     ID_Restaurante INT NOT NULL,
     Valoracion INT,
@@ -192,9 +199,19 @@ CREATE TABLE Pagos (
     FOREIGN KEY (ID_Factura) REFERENCES Facturas(ID_Factura)
 );
 
+CREATE TABLE IF NOT EXISTS Alertas_Stock (
+    ID_Alerta INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Ingrediente INT NOT NULL,
+    FechaAlerta DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    StockDisponible DECIMAL(10,2),
+    Mensaje TEXT,
+    FOREIGN KEY (ID_Ingrediente) REFERENCES Ingredientes(ID_Ingrediente)
+);
+
 /* TABLA PARA ALERTAS DE STOCK BAJO */
 DELIMITER $$
 
+DROP PROCEDURE IF EXISTS RevisarStockBajo$$
 CREATE PROCEDURE RevisarStockBajo()
 BEGIN
     INSERT INTO Alertas_Stock (ID_Ingrediente, StockDisponible, Mensaje)

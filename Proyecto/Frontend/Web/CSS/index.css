@@ -758,6 +758,8 @@ body.no-scroll {
     width: 100%;
     overflow-x: auto;
     gap: 10%;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .carousel-element-card {

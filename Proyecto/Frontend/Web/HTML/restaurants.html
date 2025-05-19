@@ -14,6 +14,8 @@
       <script src="/Proyecto/Frontend/Web/JS/subMenuChanges.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/coockies.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/sign-up.js" defer></script>
+      <script src="/Proyecto/Frontend/Web/JS/fetch.js" defer></script>
+      
       <title>Meat & Grill</title>
     </head>
     <body>
@@ -198,153 +200,10 @@
       <p class="our-menu-text">Our Restaurants</p>
     </div>
 
-      <section class="find-your-restaurant-section">
-          <h1 class="title ">Find yours</h1>
-          <!--CARD SANTA MONICA-->
-          <div class="find-your-restaurant-card">
-              <img src="/Proyecto/Frontend/Web/src/products/backgrounds/santa-monica-restaurant.png" alt="" class="find-your-restaurant-img">
-              <div class="find-your-restaurant-card-info-container">
-                  <span class="find-your-restaurant-title">SANTA MONICA</span>
-                  <p class="find-your-restaurant-location">1501 Ocean Ave, Santa Monica, CA 90401</p>
-                  <span class="find-your-restaurant-location-city">Los Angeles, United States</span>
-                  <a href="https://maps.app.goo.gl/Xos958UCV9sqQU6SA" target="_blank">
-                    <p class="find-your-restaurant-maps-link">See on maps</p>
-                  </a>
-              </div>
-              <div class="find-your-restaurant-below-bar-container">
-                  <button class="find-your-restaurant-below-bar-button">CALL NOW</button>
-                  <div class="call-now-hidden-pannel">
-                    <div class="call-now-number">213-204-0544</div>
-                    <div class="call-now-number copy-clipboard">Copied to clipboard!</div>
-                      <div class="call-now-below-options-container">
-                        <button class="call-now-below-option cancel">Cancel</button>
-                        <button class="call-now-below-option copy">Copy</button>
-                    </div>
-                  </div>
-                  <div class="find-your-restaurant-icons-container">
-                      <img src="/Proyecto/Frontend/Web/src/icons/cochecito-de-bebe.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/sombrilla.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/silla-de-ruedas.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/wifi.png" alt="" class="find-your-restaurant-icon-img">
-                  </div>
-              </div>
-          </div>
-          <!--CARD DOWNTOWN-->
-          <div class="find-your-restaurant-card">
-              <img src="/Proyecto/Frontend/Web/src/products/backgrounds/downtown-restaurant.png" alt="" class="find-your-restaurant-img">
-              <div class="find-your-restaurant-card-info-container">
-                  <span class="find-your-restaurant-title">DOWNTOWN</span>
-                  <p class="find-your-restaurant-location">622-612 Broadway, CA 90014</p>
-                  <span class="find-your-restaurant-location-city">Los Angeles, United States</span>
-                  <a href="https://maps.app.goo.gl/Xos958UCV9sqQU6SA" target="_blank">
-                    <p class="find-your-restaurant-maps-link">See on maps</p>
-                  </a>
-              </div>
-              <div class="find-your-restaurant-below-bar-container">
-                  <button class="find-your-restaurant-below-bar-button">CALL NOW</button>
-                  <div class="call-now-hidden-pannel">
-                    <div class="call-now-number">213-203-6233</div>
-                    <div class="call-now-number copy-clipboard">Copied to clipboard!</div>
-                      <div class="call-now-below-options-container">
-                        <button class="call-now-below-option cancel">Cancel</button>
-                        <button class="call-now-below-option copy">Copy</button>
-                    </div>
-                  </div>
-                  <div class="find-your-restaurant-icons-container">
-                      <img src="/Proyecto/Frontend/Web/src/icons/cochecito-de-bebe.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/silla-de-ruedas.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/wifi.png" alt="" class="find-your-restaurant-icon-img">
-                  </div>
-              </div>
-          </div>
-          <!--CARD SILVER LAKE-->
-          <div class="find-your-restaurant-card">
-              <img src="/Proyecto/Frontend/Web/src/products/backgrounds/silver-lake-restaurant.png" alt="" class="find-your-restaurant-img">
-              <div class="find-your-restaurant-card-info-container">
-                  <span class="find-your-restaurant-title">SILVER LAKE</span>
-                  <p class="find-your-restaurant-location">306 Virgil Ave, CA 90004</p>
-                  <span class="find-your-restaurant-location-city">Los Angeles, United States</span>
-                  <a href="https://maps.app.goo.gl/Xos958UCV9sqQU6SA" target="_blank">
-                    <p class="find-your-restaurant-maps-link">See on maps</p>
-                  </a>
-              </div>
-              <div class="find-your-restaurant-below-bar-container">
-                  <button class="find-your-restaurant-below-bar-button">CALL NOW</button>
-                  <div class="call-now-hidden-pannel">
-                    <div class="call-now-number">213-202-2575</div>
-                    <div class="call-now-number copy-clipboard">Copied to clipboard!</div>
-                      <div class="call-now-below-options-container">
-                        <button class="call-now-below-option cancel">Cancel</button>
-                        <button class="call-now-below-option copy">Copy</button>
-                    </div>
-                  </div>
-                  <div class="find-your-restaurant-icons-container">
-                      <img src="/Proyecto/Frontend/Web/src/icons/cochecito-de-bebe.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/sombrilla.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/silla-de-ruedas.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/wifi.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/coche.png" alt="" class="find-your-restaurant-icon-img">
-                  </div>
-              </div>
-          </div>
-          <!--CARD WEST HOLLYWOOD-->
-          <div class="find-your-restaurant-card">
-              <img src="/Proyecto/Frontend/Web/src/products/backgrounds/west-hollywood-restaurant.png" alt="" class="find-your-restaurant-img">
-              <div class="find-your-restaurant-card-info-container">
-                  <span class="find-your-restaurant-title">WEST HOLLYWOOD</span>
-                  <p class="find-your-restaurant-location">855-801 N W Knoll Dr, West Hollywood, CA 90069</p>
-                  <span class="find-your-restaurant-location-city">Los Angeles, United States</span>
-                  <a href="https://maps.app.goo.gl/Xos958UCV9sqQU6SA" target="_blank">
-                    <p class="find-your-restaurant-maps-link">See on maps</p>
-                  </a>
-              </div>
-              <div class="find-your-restaurant-below-bar-container">
-                  <button class="find-your-restaurant-below-bar-button">CALL NOW</button>
-                  <div class="call-now-hidden-pannel">
-                    <div class="call-now-number">213-201-4912</div>
-                    <div class="call-now-number copy-clipboard">Copied to clipboard!</div>
-                      <div class="call-now-below-options-container">
-                        <button class="call-now-below-option cancel">Cancel</button>
-                        <button class="call-now-below-option copy">Copy</button>
-                    </div>
-                  </div>
-                  <div class="find-your-restaurant-icons-container">
-                      <img src="/Proyecto/Frontend/Web/src/icons/sombrilla.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/silla-de-ruedas.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/coche.png" alt="" class="find-your-restaurant-icon-img">
-                  </div>
-              </div>
-          </div>
-          <!--CARD CULVER CITY-->
-          <div class="find-your-restaurant-card">
-              <img src="/Proyecto/Frontend/Web/src/products/backgrounds/culver-city-restaurant.png" alt="" class="find-your-restaurant-img">
-              <div class="find-your-restaurant-card-info-container">
-                  <span class="find-your-restaurant-title">CULVER CITY</span>
-                  <p class="find-your-restaurant-location">6000 Sepulveda Blvd, Culver City, CA 90230</p>
-                  <span class="find-your-restaurant-location-city">Los Angeles, United States</span>
-                  <a href="https://maps.app.goo.gl/jnuBwGg8yopc3WJc9">
-                    <p class="find-your-restaurant-maps-link">See on maps</p>
-                  </a>
-              </div>
-              <div class="find-your-restaurant-below-bar-container">
-                  <button class="find-your-restaurant-below-bar-button">CALL NOW</button>
-                  <div class="call-now-hidden-pannel">
-                    <div class="call-now-number">213-200-4076</div>
-                    <div class="call-now-number copy-clipboard">Copied to clipboard!</div>
-                      <div class="call-now-below-options-container">
-                        <button class="call-now-below-option cancel">Cancel</button>
-                        <button class="call-now-below-option copy">Copy</button>
-                    </div>
-                  </div>
-                  <div class="find-your-restaurant-icons-container">
-                      <img src="/Proyecto/Frontend/Web/src/icons/cochecito-de-bebe.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/silla-de-ruedas.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/wifi.png" alt="" class="find-your-restaurant-icon-img">
-                      <img src="/Proyecto/Frontend/Web/src/icons/coche.png" alt="" class="find-your-restaurant-icon-img">
-                  </div>
-              </div>
-          </div>
-        </section>
+      <section id="restaurante" class="find-your-restaurant-section">
+        <h1 class="title">Find yours</h1>
+        <div id="restaurantes-container"></div>
+      </section>
 
         <!--Sección Coming Soon-->
         <section id="coming-soon" class="coming-soon-section">
@@ -479,5 +338,6 @@
             </div>
           </div>
         </section>
+        <script src="/Proyecto/Frontend/Web/JS/restaurants-call-now.js"></script>
       <body>
 </html>

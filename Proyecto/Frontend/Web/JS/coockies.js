@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   acceptBtn.addEventListener('click', () => {
     localStorage.setItem('cookiesAccepted', 'true');
     banner.style.display = 'none';
-    location.reload();
+    cargarAnalytics();
   });
 
   rejectBtn.addEventListener('click', () => {
@@ -22,16 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
     banner.style.display = 'none';
   });
 
-  // Cargar Google Analytics solo si se aceptaron
   if (cookiesDecision === 'true') {
+    cargarAnalytics();
+  }
+
+  function cargarAnalytics() {
+    const ANALYTICS_ID = 'G-ABCD1234EF';
+
+    if (!ANALYTICS_ID.startsWith('G-')) {
+      console.warn('Analytics ID inválido:', ANALYTICS_ID);
+      return;
+    }
+
     const gaScript = document.createElement('script');
-    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=TU-ID';
+    gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_ID}`;
     gaScript.async = true;
+    gaScript.onerror = () => console.error("Fallo al cargar Google Analytics");
     document.head.appendChild(gaScript);
 
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
     gtag('js', new Date());
-    gtag('config', 'TU-ID');
+    gtag('config', ANALYTICS_ID);
   }
 });

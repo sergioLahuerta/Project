@@ -1,4 +1,4 @@
-window.onload = function () {
+  function startBlinkCycle() {
     const elements = document.getElementsByClassName('');
     let blinkCount = 0;
     let isWhite = true;

@@ -1,76 +1,38 @@
 package model;
-
 import java.util.ArrayList;
-import java.util.Date;
+import model.DetallesPedidos;
 
-    public class Carrito {
-        private int id_carrito;
-        private int id_cliente;
-        private Date fecha_creacion;
-        private String direccion_envio;
-        private ArrayList<Producto> productos;
+public class Carrito {
+    private ArrayList<DetallesPedidos> items;
 
-        // Constructor
-        public Carrito() {
-            this.productos = new ArrayList<>();
-        }
-
-        // Getters y setters
-
-        public int getId_carrito() {
-            return id_carrito;
-        }
-
-        public void setId_carrito(int id_carrito) {
-            this.id_carrito = id_carrito;
-        }
-
-        public int getId_cliente() {
-            return id_cliente;
-        }
-
-        public void setId_cliente(int id_cliente) {
-            this.id_cliente = id_cliente;
-        }
-
-        public Date getFecha_creacion() {
-            return fecha_creacion;
-        }
-
-        public void setFecha_creacion(Date fecha_creacion) {
-            this.fecha_creacion = fecha_creacion;
-        }
-
-        public String getDireccion_envio() {
-            return direccion_envio;
-        }
-
-        public void setDireccion_envio(String direccion_envio) {
-            this.direccion_envio = direccion_envio;
-        }
-
-        public ArrayList<Producto> getProductos() {
-            return productos;
-        }
-
-        public void setProductos(ArrayList<Producto> productos) {
-            this.productos = productos;
-        }
-
-        @Override
-        public String toString() {
-            return "Carrito{" +
-                    "id_carrito=" + id_carrito +
-                    ", id_cliente=" + id_cliente +
-                    ", fecha_creacion=" + fecha_creacion +
-                    ", direccion_envio='" + direccion_envio + '\'' +
-                    ", productos=" + productos +
-                    '}';
-        }
-
-        public void addProducto(Producto producto) {
-        }
+    public Carrito() {
+        items = new ArrayList<>();
     }
 
+    public void agregarProducto(int idProducto, int cantidad, String observaciones) {
+        // Verificar si el producto ya está en el carrito para sumar cantidad (opcional)
+        for (DetallesPedidos dp : items) {
+            if (dp.getId_producto() == idProducto) {
+                dp.setCantidad(dp.getCantidad() + cantidad);
+                return;
+            }
+        }
+        DetallesPedidos nuevoDetalle = new DetallesPedidos();
+        nuevoDetalle.setId_producto(idProducto);
+        nuevoDetalle.setCantidad(cantidad);
+        nuevoDetalle.setObservaciones(observaciones);
+        items.add(nuevoDetalle);
+    }
 
+    public void eliminarProducto(int idProducto) {
+        items.removeIf(dp -> dp.getId_producto() == idProducto);
+    }
 
+    public ArrayList<DetallesPedidos> getItems() {
+        return items;
+    }
+
+    public void limpiar() {
+        items.clear();
+    }
+}

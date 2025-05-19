@@ -1,8 +1,3 @@
-<!--PARA HACER:
-  1- Descargar fuente y meterla en otro css como en el video (Dalto)
-  2-
--->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,8 +8,9 @@
       <script src="/Proyecto/Frontend/Web/JS/carouselNewReleases.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/neonEffect.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/subMenuChanges.js" defer></script>
-      <script src="/Proyecto/Frontend/Web/JS/coockies.js" defer></script>
+      <script src="/Proyecto/Frontend/Web/JS/coockies.js" defer></script>-
       <script src="/Proyecto/Frontend/Web/JS/sign-up.js" defer></script>
+      <script src="/Proyecto/Frontend/Web/JS/fetch.js" defer></script>
       <title>Meat & Grill</title>
   </head>
   <body>
@@ -150,7 +146,7 @@
           <p class="sign-up-info-subtitle">Sign up to get discount codes, free shipping, exclusive products, and earn MeatPoints!</p>
           <p class="sign-up-info-main-text">Register now. It's free!</p>
         </div>
-        <form id="signup-form" method="POST" action="/login" class="sign-up-form">
+        <form id="signup-form" method="POST" action="http://localhost:8080/pruebaDBconsola/registroUsuario" class="sign-up-form">
           <input type="email" id="signup-email" name="email" placeholder="Email" required class="sign-up-form-input">
           <input type="password" id="signup-password" name="password" placeholder="Password" required class="sign-up-form-input">
           <button type="submit" class="sign-up-form-button">Sign Up</button>
@@ -210,50 +206,8 @@
       <div class="new-releases-container" id="results">
         <p class="title">NEW RELEASES</p>
         <!--Carrusel new releases-->
-        <section class="carousel-section">
-          <div class="carousel-container">
-            <div id="carrusel" class="carrusel">
-              <div class="carousel-element-card">
-                <div class="carousel-card-content">
-                    <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger1.png" alt="">
-                  <p class="carousel-card-burger-name">Desktop Burger</p>
-                  <a href="" class="carousel-button-a">
-                    <p class="carousel-button-p">Taste me!</p>
-                  </a>
-                </div>
-              </div>
-              <div class="carousel-element-card">
-                <div class="carousel-card-content">
-                    <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/newReleasesBurger1.png" alt="">
-                  <p class="carousel-card-burger-name">Desktop Burger</p>
-                  <a href="" class="carousel-button-a">
-                    <p class="carousel-button-p">Taste me!</p>
-                  </a>
-                </div>
-              </div>
-              <div class="carousel-element-card">
-                <div class="carousel-card-content">
-                    <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger2.png" alt="">
-                  <p class="carousel-card-burger-name">Desktop Burger</p>
-                  <a href="" class="carousel-button-a">
-                    <p class="carousel-button-p">Taste me!</p>
-                  </a>
-                </div>
-              </div>
-              <div class="carousel-element-card">
-                <div class="carousel-card-content">
-                  <img class="carrusel-image" src="/Proyecto/Frontend/Web/src/products/burgers/burger3.png" alt="">
-                  <p class="carousel-card-burger-name">Desktop Burger</p>
-                  <a href="" class="carousel-button-a">
-                    <p class="carousel-button-p">Taste me!</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-progress-container">
-            <div class="carousel-progress-bar"></div>
-          </div>
+        <section id="carrusel-categoria-1" class="carousel-section">
+          
         </section>
       </div>
           <!--Sección de free fries
@@ -273,9 +227,9 @@
         </div>
 
         <!--Sección de los carteles promo-->
-      <section class="section-promo-burgers">
+      <section id="ofertas" class="section-promo-burgers">
         <p class=" title promo-burger-title">PROMOS</p>
-        <div class="card-promo-burger-ad">
+        <!--<div class="card-promo-burger-ad">
           <img src="/Proyecto/Frontend/Web/src/products/promos/classic-burger-promo.png" alt="" class="img-promo-burger">
           <div class="info-card-promo-burger">
             <p class="title-info-card-promo-burger">Classic Burger</p>
@@ -334,7 +288,7 @@
               Try it now!
             </button>
           </div>
-        </div>
+        </div>-->
       </section>
 
       <!--Sección de información del delivery-->
