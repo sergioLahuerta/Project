@@ -62,7 +62,14 @@ public class MotorSql implements IMotorSql {
         return m_Resulset;
     }
 
-
+    public static Connection getConnection() throws SQLException {
+        try {
+            Class.forName(DRIVER_NAME);
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("Driver no encontrado", e);
+        }
+        return DriverManager.getConnection(MYSQL_URL, MYSQL_USER, MYSQL_PASS);
+    }
 
     @Override
     public void disconnected() {

@@ -16,6 +16,8 @@
       <script src="/Proyecto/Frontend/Web/JS/sign-up.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/footer.js" defer></script>
       <script src="/Proyecto/Frontend/Web/JS/change-ingredients.js" defer></script>
+      <script src="/Proyecto/Frontend/Web/JS/fetch.js" defer></script>
+      <script src="/Proyecto/Frontend/Web/JS/addToChart.js" defer></script>
       <title>Meat & Grill</title>
   </head>
   <body>
@@ -211,40 +213,34 @@
        </div>
      </div>
 
-<!--Sección DETAILS-->
-    <section id="details" class="details-section">
-        <div class="details-card-container">
-            <div class="details-img-container">
-                <img src="" alt="" class="details-img">
-            </div>
-            <div class="details-info-container">
-                <p class="details-name-product"></p>
-                <p class="details-subtext-product"></p>
-                <p class="details-description-product"></p>
-                <p class="details-price"></p>
-            </div> 
-            <div id="ingredients-list-panel" class="ingredients-list-panel hidden">
-                <p>Select ingredients to remove:</p>
-                <div class="ingredient-options">
-                    <label class="ingredient-checkbox">
-                      <input type="checkbox" name="ingredient" value="lettuce">Lettuce</label>
-                    <label class="ingredient-checkbox">
-                      <input type="checkbox" name="ingredient" value="tomato">Tomato</label>
-                    <label class="ingredient-checkbox">
-                      <input type="checkbox" name="ingredient" value="onion">Onion</label>
-                </div>
-            </div>
-            <input id="details-toggle-buy" type="checkbox" class="details-input-purchase" hidden>
-            <label for="details-toggle-buy" class="details-button-purchase">Add to chart</label>
-            <div id="ingredient-choice-panel" class="details-pannel-ingredients">
-                <p>Do you want to change 1 or more ingredients?</p>
-                <div class="details-pannel-choice-container">
-                    <button id="change-ingredients-btn" class="details-pannel-choice-ingredients">Change ingredients</button>
-                    <button class="details-pannel-choice-ingredients">I'm normal</button>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!--Sección DETAILS-->
+  <section id="details" class="details-section">
+   <div class="details-card-container">
+     <div class="details-img-container">
+       <img src="" alt="" class="details-img">
+     </div>
+     <div class="details-info-container">
+       <p class="details-name-product"></p>
+       <p class="details-subtext-product"></p>
+       <p class="details-description-product"></p>
+       <p class="details-price"></p>
+     </div> 
+     <div id="ingredients-list-panel" class="ingredients-list-panel hidden">
+       <p>Select ingredients to remove:</p>
+       <div class="ingredient-options"></div>
+     </div>
+     <input id="details-toggle-buy" type="checkbox" class="details-input-purchase" hidden>
+     <label for="details-toggle-buy" class="details-button-purchase">Add to chart</label>
+     <div id="ingredient-choice-panel" class="details-pannel-ingredients">
+       <p>Do you want to change 1 or more ingredients?</p>
+       <div class="details-pannel-choice-container">
+         <button id="change-ingredients-btn" class="details-pannel-choice-ingredients">Change ingredients</button>
+         <button id="btn-normal" class="details-pannel-choice-ingredients">I'm normal</button>
+       </div>
+     </div>
+   </div>
+  </section>
+
 
     <!--Sección de información del delivery-->
       <section class="section-delivery-info">

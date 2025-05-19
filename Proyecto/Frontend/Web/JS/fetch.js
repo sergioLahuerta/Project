@@ -1,4 +1,4 @@
-//CARRUSEL New Releases
+//CARRUSEL
 const carpetasPorCategoria = {
   1: 'burgers',
   2: 'drinks',
@@ -63,8 +63,8 @@ async function cargarProductosPorCategoria(categoriaId) {
     console.error(error);
   }
 }
-
 cargarProductosPorCategorias();
+
 
 //OFERTAS
 async function cargarOfertas() {
@@ -175,11 +175,15 @@ async function cargarRestaurantes() {
   }
 }
 window.addEventListener('DOMContentLoaded', cargarRestaurantes);
+cargarRestaurantes();
 
 //DEATLLES
 function getIdFromUrl() {
   const params = new URLSearchParams(window.location.search);
   return params.get('id');
+  if (!id) {
+    console.error('No se encontró el ID del producto en la URL:', window.location.href);
+  }
 }
 
 async function cargarProductoDetalles() {
@@ -191,11 +195,10 @@ async function cargarProductoDetalles() {
   }
 
   try {
-    const response = await fetch(`http://localhost:8080/pruebaDBConsola/api/productos?id=${id}`);
+    const response = await fetch(`http://localhost:8080/pruebaDBConsola/api/productos/${id}`);
     if (!response.ok) throw new Error('Error al cargar producto');
 
     const producto = await response.json();
-
     mostrarProducto(producto);
   } catch (error) {
     console.error(error);
@@ -203,30 +206,114 @@ async function cargarProductoDetalles() {
 }
 
 function mostrarProducto(producto) {
-  const carpeta = {
+  const carpetasPorCategoria = {
     1: 'burgers',
     2: 'drinks',
     3: 'sides',
     4: 'desserts'
-  }[producto.id_categoria] || 'default';
+  };
 
-  // Imagen con id_producto (ojo aquí)
-  document.querySelector('.details-img-container').innerHTML = `
-    <img src="/Proyecto/Frontend/Web/src/products/${carpeta}/burger${producto.id_producto}.png" alt="${producto.nombre}" class="details-img" />
-  `;
-  
+  const carpeta = carpetasPorCategoria[producto.id_categoria] || 'default';
+
+  document.querySelector('.details-img').src = `/Proyecto/Frontend/Web/src/products/${carpeta}/${producto.id_producto}.png`;
+  document.querySelector('.details-img').alt = producto.nombre;
   document.querySelector('.details-name-product').innerText = producto.nombre;
-  
-  // Como no tienes subtitulo en el JSON, puedes dejarlo vacío o quitar esta línea
-  document.querySelector('.details-subtext-product').innerText = ''; 
-  
+  document.querySelector('.details-subtext-product').innerText = '';
   document.querySelector('.details-description-product').innerText = producto.descripcion || 'Sin descripción';
+  document.querySelector('.details-price').innerText = producto.precio ? `${producto.precio.toFixed(2)} €` : '';
+}
+cargarProductoDetalles();
 
-  // Si tienes precio, ponlo en details-price
-  if (producto.precio !== undefined) {
-    document.querySelector('.details-price').innerText = producto.precio.toFixed(2);
+
+//Ingredientes Details
+async function cargarIngredientesDelProducto() {
+  const productoId = getIdFromUrl();
+
+  if (!productoId) {
+    console.error("No se encontró el ID del producto en la URL");
+    return;
+  }
+
+  const url = `http://localhost:8080/pruebaDBConsola/api/ingredientes?producto=${productoId}`;
+
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Error al cargar ingredientes: ${res.status} ${res.statusText}`);
+
+    const ingredientes = await res.json();
+    const container = document.querySelector(".ingredient-options");
+
+    if (!container) {
+      console.warn("No se encontró el contenedor .ingredient-options");
+      return;
+    }
+
+    container.innerHTML = "";
+
+    if (ingredientes.length === 0) {
+      container.innerText = "No hay ingredientes disponibles para este producto.";
+      return;
+    }
+
+    ingredientes.forEach(ing => {
+      const label = document.createElement("label");
+      label.className = "ingredient-checkbox";
+
+      label.innerHTML = `
+        <input type="checkbox" name="ingredient" value="${ing.id_ingrediente}">
+        ${ing.nombre}
+      `;
+
+      container.appendChild(label);
+    });
+  } catch (error) {
+    console.error("Error al cargar ingredientes:", error);
   }
 }
+cargarIngredientesDelProducto();
 
-window.addEventListener('DOMContentLoaded', cargarProductoDetalles);
+//Realizar Pedido
+async function realizarPedido() {
+  const pedido = {
+    id_factura: 1,             // Puedes cambiar esto si usas facturas reales
+    id_restaurante: 1,         // Debes obtenerlo del contexto de la página
+    id_usuario: 5,             // Este debería salir del login/sesión
+    numero: 1                  // Puedes dejarlo fijo o generar dinámico
+  };
 
+  // Supón que los productos seleccionados están en esta variable:
+  const carrito = [
+    { id_producto: 100, cantidad: 2, observaciones: "Sin cebolla" },
+    { id_producto: 101, cantidad: 1, observaciones: "" }
+  ];
+
+  const payload = {
+    pedido: pedido,
+    detalles: carrito
+  };
+
+  try {
+    const response = await fetch("http://localhost:8080/pruebaDBConsola/crearPedido", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await response.json();
+
+    if (response.ok && data.success) {
+      alert("Pedido creado correctamente. ID: " + data.idPedido);
+      console.log("Pedido creado:", data);
+    } else {
+      console.error("Error al crear pedido:", data);
+      alert("Hubo un error al crear el pedido.");
+    }
+
+  } catch (error) {
+    console.error("Error al enviar pedido:", error);
+    alert("Error de conexión al enviar el pedido.");
+  }
+}
+realizarPedido();
